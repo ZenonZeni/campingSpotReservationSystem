@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+#registration-form h2 {
+
+  font-size: 35px;
+  margin-top: -10px;
+  animation: mymove 4s infinite;
+  font-family: Brush Script;
+
+}
+@keyframes mymove {
+  65% {font-size: 55px;}
+}
+
+#registration-form h3 {
+
+  font-size: 20px;
+  margin-top: -25px;
+  font-family: Brush Script;
+  font-family: Copperplate, Papyrus, fantasy;
+
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+ 
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 80;
+  padding: 0px;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+#registration-form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 60px;
+  background: #FFF0F5;
+  border: 15px solid #ccc;
+  border-radius: 30px;
+  background-image: url("https://s7d2.scene7.com/is/image/TWCNews/Camping_Mountains_Sunny_ClifordMervil_Pexels-2398220");
+  background-color: #cccccc;
+  background-repeat: repeat;
+
+}
+#registration-form p {
+  margin: -40px 0px -10px 0px;
+  text-shadow: 2px 2px 8px #FF0000;
+  padding: 20px;
+}
+
+#registration-form input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+#registration-form input[type=firstname] {
+
+  float: left;
+  box-sizing: border-box;
+  width: 40%;
+  margin: 0 0 20px 0;
+  padding: 10px;
+
+}
+
+#registration-form input[type=lastname] {
+
+  float: right;
+  box-sizing: border-box;
+  width: 45%;
+  margin: 0 0px 20px 0;
+  padding: 10px;
+
+}
+
+#registration-form label[type=birth] {
+
+
+  font-size: 18px;
+  color: white;
+
+}
+
+#registration-form label[type=gender] {
+
+   float: right;
+   color: white;
+   font-size: 18px;
+}
+
+
+#registration-form select[type=birthdate] {
+ 
+float:left;
+font-size: 16px;
+
+}
+#registration-form select[type=gender] {
+
+font-size: 16px;
+float:right;
+color:black;
+}
+
+#agreement {
+
+  padding: 18px;
+
+}
+
+#agreement h4 {
+
+  color: white;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+#button2  {
+
+margin-top: -10px;
+
+}
+
+#registration-form button {
+
+  text-align: center; 
+   width:65%;
+   margin-left:18%;
+   margin-right:80%;
+
+}
+#registration-form button[type=submit-new]{
+   border: 1px solid #ccc;
+  padding: 18px;
+  background: #7FFF00;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: verdana;
+}
+
+
+.accountlogo {
+
+  display: inline-block;
+  vertical-align: top;
+  width: 8%;
+  margin-right: 8px;
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">  
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="ExampleLogin.html">Login</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Book Now!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<br> 
+<div>
+   <form id="registration-form">
+      <div>
+            <h2> Sign Up </h2>
+                  <h3> It's Quick And Easy </h3>
+           
+      
+      </div>
+
+      <input type="firstname" placeholder="First Name"/>
+      <input type="lastname" placeholder="Last Name"/>
+      <input type="email"placeholder="Phone Number or Email Address"/>
+      <input placeholder="Password"/>
+      <input placeholder="Confirm Password"/>
+
+<div>
+      <label type="birth"> Date Of Birth </label>
+      <label type="gender"> Gender </label>
+</div>
+<div>
+      <select type="birthdate" > 
+          <option value="0">Year</option>
+          <option value="1">2000</option>
+          <option value="2">2001</option>
+          <option value="3">2002</option>
+          <option value="4">2003</option>
+          <option value="5">2004</option>
+          <option value="6">2005</option>
+          <option value="7">2006</option>
+          <option value="8">2007</option>
+          <option value="9">2008</option>
+          <option value="10">2009</option>
+          <option value="11">2010</option>
+          <option value="12">2011</option>
+     </select>
+
+      <select type="birthdate"> 
+          <option value="0">Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">Apirl</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">Noveremebr</option>
+          <option value="12">December</option>
+      </select>
+       <select type="birthdate" > 
+         <option value="0">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+
+       </select>
+
+   <select type="gender" >
+         <option value="0">Select Gender</option>
+         <option value="1">Male</option>
+         <option value="2">Female</option>
+   </select>
+
+
+
+
+</div>
+<div id="agreement">
+
+<h4> By clicking Create Account, you agree to our <span style="color: Cyan"> Terms, Data Policy </span> and <span style="color: Cyan"> Cookies Policy.</span> You may receive SMS Notifications from us and can opt out any time.
+
+</h4>
+
+
+</div>
+<div id="button2">
+
+      <button type="submit-new"> <img src="https://www.pngmart.com/files/10/Male-User-Account-PNG-Photos.png" alt="account" class="accountlogo">
+      Create Account</button>
+</div>
+
+     </form>
+</div>
+
+
+
+
+</body>
+</html>
