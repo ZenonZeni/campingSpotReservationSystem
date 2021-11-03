@@ -2,90 +2,121 @@
 <html>
 <head>
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 
-background-image: url("https://wallpaperaccess.com/full/5826.jpg");
-  background-color: #cccccc;
-background-color: none;
-}
-
-h1 {
-color: LightGreen;
-text-align: left;
-font-family: "Sofia", sans-serif;
-font-size: 60px;
-}
-
-p {
-
-font-family: verdana;
-color: white;
-font-size: 25px;
-
-
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
 }
 
 
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: LightGrey;
+.container {
+	width: 80%;
+	margin: 0 auto;
 }
 
-li a {
-  float: left;
+header {
+  background: #55d6aa;
 }
 
-li b {
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+
+}
+
+nav {
   float: right;
 }
 
-li a {
-  display: block;
-  color: DeepSkyBlue;
-  text-align: left;
-  padding: 10px;
-  text-decoration: none;
+nav ul {
+  margin: 80;
+  padding: 0px;
+  list-style: none;
 }
 
-li a:hover {
-  background-color: BlanchedAlmond;
-}
-li b {
-  display: block;
-  color: black;
-  text-align: right;
-  padding: 10px;
-  text-decoration: none;
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+  position: relative;
 }
 
-li b:hover {
-  background-color: BlanchedAlmond;
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+.background-image {
+
+ width: 75%;
+ height: auto;
+ border: 20px solid #ccc;
+ border-radius: 200px;
+ padding: 10px;
+ margin-right: 150px;
+
+}
+
 
 </style>
 </head>
 
 <body>
 
-<ul>
-  <li style="font-size:110%;"><a href=""><img align= 'left' src="https://icon-library.com/images/reservation-icon-png/reservation-icon-png-29.jpg" width="40" height="50"><strong>Camp Reservation </strong></a></li>
-  <li style="font-size:110%;"><a href=""><img align= 'left' src="https://static.thenounproject.com/png/15044-200.png" width="45" height="35"><strong> Gift Cards </strong> </a></li>
-  <li style="font-size:110%;"><a href=""><img align = 'left' src= "https://cdn1.vectorstock.com/i/1000x1000/25/50/store-icon-vector-13652550.jpg" width="45" height="35"><strong>Store </strong></a></li>
- <li style="font-size:110%;"><b href=""><strong> <a href="ExampleLogin.html"> Login </a> </strong></a></li>
- <li style="font-size:110%;"><b href=""> <strong>Select Language </strong></a></li>
- <li style="font-size:110%;"><b href=""><strong> View Cart</strong></a> </li>
-</ul>
+<header>
+    <div class="container">
+      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
 
-<div>
-</div>
+      <nav>
+        <ul>
+          <li><a href="NewCampingPage.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="NewLoginPage.html">Account</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Book Now!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<h1 style = "margin:0px; "> <img align= 'left' src="https://media.glassdoor.com/sqll/2358434/camp-reservations-canada-squarelogo-1542907964578.png" alt="Camp Spot" width="300" height="150"></h1>
-<br>
-<h1 style = "background-color:black;"> <strong>Camping Spot Reservation</strong> </h1>
-<p style = "margin:20px; padding:32px"> <img align = 'center' src="https://wallpaperaccess.com/full/5826.jpg" width="100%" height="auto"> </p>
+<img align = 'right' src="https://wallpaperaccess.com/full/5826.jpg" alt="image" class="background-image">
+
 </body>
 </html>

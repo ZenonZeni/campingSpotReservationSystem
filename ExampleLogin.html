@@ -1,30 +1,97 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Login Page</title>
 <style>
 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 
-  background-image: url("https://www.wallpaperkiss.com/wimg/b/124-1245920_big.jpg");
-  background-color: #cccccc;
-  
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
 
 }
-#logo {
 
-  margin: -50px 0px;
-
+nav {
+  float: right;
 }
+
+nav ul {
+  margin: 80;
+  padding: 0px;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
 
 #login-form  {
-  max-width: 380px;
+  width: 450px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 60px;
   background: #FFF0F5;
-  border: 1px solid #ccc;
-  border-radius: 25px;
+  border: 15px solid #ccc;
+  border-radius: 30px;
   background-image: url("https://s7d2.scene7.com/is/image/TWCNews/Camping_Mountains_Sunny_ClifordMervil_Pexels-2398220");
   background-color: #cccccc;
   background-repeat: repeat;
@@ -50,7 +117,7 @@ body {
 }
 #login-form button {
 
-text-align: center;
+  text-align: center;
    width:65%;
    margin-left:18%;
    margin-right:80%;
@@ -64,14 +131,28 @@ text-align: center;
   cursor: pointer;
   border-radius: 25px;
   font-family: verdana;
-}
-html, body { font-family: arial, sans-serif; }
+
 </style>
-  </head>
-  <body>
-<p id = "logo">
-<img align= 'top-left' src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png" width="550" height="300">
-</p>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
+
+      <nav>
+        <ul>
+          <li><a href="NewCampingPage.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="NewLoginPage.html">Account</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Book Now!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 <p id="login">
 
@@ -87,5 +168,6 @@ html, body { font-family: arial, sans-serif; }
 
      </form>
 </p>
-  </body>
+
+</body>
 </html>
