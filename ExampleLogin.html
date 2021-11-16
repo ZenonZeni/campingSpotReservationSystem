@@ -133,6 +133,7 @@ nav a:hover::before {
   font-family: verdana;
 
 </style>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
@@ -157,18 +158,20 @@ nav a:hover::before {
 
 <div>
 
-   <form id="login-form">
+   <form id="login-form" method="post">
 
       <p align='center'>
       <img align='center' src="https://www.freeiconspng.com/uploads/member-login-icon-6.png" width="180" height="120" alt="Member Login icon" />
-       </p>
-      <input placeholder="Email or Phone Number"/>
-      <input placeholder="Password"/>
-      <input type="submit" value="Sign In"/>
+      </p>
+      <input placeholder="Username" type="username" name="username" id="username"/>
+      <input placeholder="Password" type="password" name="password" id ="password"/>
+      <input type="submit" name="loginBtn" id="loginBtn" value="Login"/>
       <button type="submit-new" formaction="RegistrationPage.html">Or Create New Account</button>
 
      </form>
+	 <script type="text/javascript" src="JavaScript&PHP/login_JavaScript.js"></script>
 </div>
+
 
 </body>
 </html>
