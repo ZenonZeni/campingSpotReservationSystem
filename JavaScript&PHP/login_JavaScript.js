@@ -15,6 +15,8 @@ $(document).ready(function() {
                 // let's redirect
                 if (jsonData.success == "1")
                 {
+					eraseCookie();
+					setCookie(jsonData.username, jsonData.password, 0.001);
                     alert('Valid Credentials! Redirecting to Home Page');
                     window.location.href = "index.html";
                 }

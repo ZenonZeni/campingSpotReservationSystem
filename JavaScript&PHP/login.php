@@ -55,7 +55,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 
     //Checks if login conditions are valid or not
     if($validUserName && $validPassWord){
-        echo json_encode(array('success' => 1));
+        echo json_encode(array('success' => 1, 'username' => $username, 'password' => $password));
     }
     else if($validUserName == false){
       echo json_encode(array('success' => 2));
