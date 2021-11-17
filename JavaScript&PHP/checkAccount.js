@@ -1,13 +1,12 @@
 //by:Christopher Nguyen | 216213332
 //Login page javascript using AJAX, Jquery and JSON to get credentials and check if valid or not.
 function checkCookie() {
-  let user = getCookie("username");
-  let expireDate = getCookie("expireDate");
+  let user = getCookie("user");
   if (user == undefined) {
 	console.log("No previous user has been found")
 	} 
 	else if(user!= undefined){
-		alert("Hi " + user + " | " + " Login Expires on: " + expireDate)
+		alert("Hi " + user.username + " | " + " Login Expires on: " + user.expireDate)
 	}
 	else {
 	  console.log("No previous user has been found")
@@ -15,35 +14,33 @@ function checkCookie() {
 }
 
 function getCookie(attribute) {
-	let x = attribute;
+	let x = attribute + "=";
+	let input = attribute;
 	let decodedCookie = decodeURIComponent(document.cookie);
 	let ca = decodedCookie.split(';');
+	if (document.cookie!= ""){
 	  for(let i = 0; i <ca.length; i++) {
 		let c = ca[i];
+		console.log(ca[i]);
 		while (c.charAt(0) == ' ') {
 		  c = c.substring(1);
 		}
-		if (c.indexOf(name) == 0) {
-			
-		 var obj = JSON.parse(c.substring(name.length, c.length));
-		  if(x == "username"){
-		  return obj.username;
-		  }
-		  else{
-			  return obj.expireDate;
-		  }
+		console.log(c.indexOf(x));
+		if (c.indexOf(x) == 0) {
+		console.log(c.substring(x.length, c.length));
+		 var obj = JSON.parse(c.substring(x.length, c.length));
+		 
+		  if(input == "user"){
+				console.log("user= " + obj.username);
+				console.log("expireDate" + obj.expireDate);
+				return obj;
+		  }	  
 		}
 	  }
- // if (document.cookie.length != 0) {
-	//  var obj = JSON.parse(document.cookie);
-	 // if(x == "username"){
-	//	  return obj.username;
-	 // }
-	 // else{
-		  //return obj.expireDate;
-	//  }
-  //}
-
+	  }
+	else{
+			return undefined;
+	}
 }
 
 function setCookie(user, pass, days) {
@@ -63,7 +60,7 @@ function setCookie(user, pass, days) {
 	//Converting JavaScript object to JSON string      
 	var jsonString = JSON.stringify(obj);  
 	  
-	document.cookie = jsonString + ";" + cookieExpire + ";path=/";  
+	document.cookie = "user" + "=" + jsonString + ";" + "name=userInfo" + ";" + cookieExpire + ";path=/";  
 }
 
 function eraseCookie() {
