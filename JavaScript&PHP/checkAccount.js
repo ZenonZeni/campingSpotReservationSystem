@@ -5,7 +5,7 @@ function checkCookie() {
   if (user != "") {
     alert("Welcome again " + user);
   } else {
-	  alert("No previous user found")
+	  console.log("No previous user has been found")
      //user = prompt("Please enter your name:","");
      //if (user != "" && user != null) {
        //setCookie("username", user, 30);
