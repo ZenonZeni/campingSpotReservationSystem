@@ -12,6 +12,8 @@ body {
         background: #222;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 800;
+        height:100%;
+        padding:0;
 }
 
 
@@ -88,27 +90,13 @@ nav a:hover::before {
 }
 
 
-.background-image {
-
- width: 75%;
- height: auto;
- border: 20px solid #ccc;
- border-radius: 200px;
- padding: 10px;
- margin-right: 150px;
-
-}
-
-
-
-
 .bottomnavbar {
 	width: 100%;
 	margin: 0 auto;
-        overflow: hidden;
-        background-color: #55d6aa;
-        position: relative;
-        bottom: 0;
+  overflow: hidden;
+  background-color: #55d6aa;
+  position: relative;
+ margin-top: -20px;
 
 }
 
@@ -117,7 +105,8 @@ nav a:hover::before {
   vertical-align: top;
   width: 15%;
   margin-left: 120px;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 
 }
 
@@ -152,6 +141,120 @@ nav h3  p {
 
 }
 
+
+
+#wrapper {
+    padding:100px 0 75px 0;
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.container2 {padding:15px;}
+
+.middle {
+    min-height:80%;
+     padding: 15px;
+    position:relative;
+
+}
+.middle h1 {
+
+   color: white;
+   font-size: 35px;
+
+}
+
+
+.top {
+
+    margin: auto;
+    margin-top: -90px;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 220px;
+    color: white;
+    background-image: url("https://picstatio.com/download/3840x2160/bwmhno/camping-with-tent-under-night-sky-wallpaper.jpg");
+    background-size: cover;
+    border: 20px solid #ccc;
+    border-radius: 200px;
+
+}
+
+.top h2, p{
+
+font-family: Copperplate, Papyrus, fantasy;
+font-style: oblique;
+}
+
+.top button {
+
+      padding: 10px;
+      width: 15%;
+      background-color: grey;
+      box-sizing:border-box;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 15px;
+      font-family:Arial;
+      color: white;
+
+
+}
+
+
+.middle .column {
+  float: left;
+  width: 26%;
+  padding: 25px;
+  height: 300px;
+  display: inline-block;
+  margin-left: 35px;
+  color: white;
+
+}
+
+.middle .column p {
+   font-size: 115%;
+}
+
+.middle .column button {
+      padding: 5px;
+      width: 32%;
+      background-color: DarkSeaGreen;
+      box-sizing:border-box;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-family:Arial;
+      color: white;
+}
+
+/* Clear floats after the columns */
+.middle .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.bottom button  {
+
+
+    margin: auto;
+    width: 20%;
+    margin-left: 42%;
+    padding: 10px;
+    box-sizing:border-box;
+    border-radius: 35px;
+    font-size: 150%;
+    font-family:Arial;
+    font-style: oblique;
+    cursor: pointer;
+    background-color: DarkGreen;
+    color: lightgrey;
+    border: 10px solid #ccc;
+}
 </style>
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 </head>
@@ -175,10 +278,97 @@ nav h3  p {
     </div>
   </header>
 
-<div>
-<img align = 'right' src="https://wallpaperaccess.com/full/5826.jpg" alt="image" class="background-image">
+
+<div id="wrapper">
+    <div class="top"> <h2> Start Your Adventure Plan Today!</h2>
+    <hr>
+    <p> "Camping Rules. Start At The Fire. Listen To The Birds. Jump in The Lake. Read. Take a Nap.  <br>
+         Relax. Watch The Sunset. Cook Over The Fire. Breathe The Fresh Air." </p>
+          <button> <strong>Learn More!  </strong></button>
+
+    </div>
+    <div class="middle">
+        <div class="container2">
+          <h1> Explore </h1>
+          <hr>
+<br>
+<div class="row">
+  <div class="column" style="background-image: url('https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg'); background-size: cover;">
+    <h2>Ontario</h2> <hr>
+    <p>Algonquin Provincial Park </p>
+    <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://themilepost.com/wp-content/uploads/2020/11/banff-4368838_1920.jpg'); background-size: cover;">
+    <h2>Alberta</h2><hr>
+    <p>Banff National Park</p>
+    <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://www.weddinginfashion.com/wp-content/uploads/2021/06/Prince-Edward-Island-National-Park.jpg'); background-size: cover;">
+    <h2>Prince Edward Island</h2><hr>
+    <p>Prince Edward Island National Park</p>
+   <button> Detail </button>
+  </div>
+
 </div>
 <br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-image: url('https://assets3.thrillist.com/v1/image/2883194/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg'); background-size: cover;">
+    <h2>Ontario</h2><hr>
+    <p>Bruce Peninsula National Park</p>
+    <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://catalogue.novascotia.com/ManagedMedia/27777.jpg'); background-size: cover;">
+    <h2>Nova Scotia</h2><hr>
+    <p>Cape Breton Highlands National Park</p>
+     <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/07/89/b6/53/torngat-mountains-national.jpg'); background-size: cover;">
+    <h2>NewFoundland And Labardor</h2><hr>
+    <p>Tornagat Mountains National Park</p>
+    <button> Detail </button>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="column" style="background-image: url('https://sandinmysuitcase.com/wp-content/uploads/2021/01/Things-to-See-in-Jasper-National-Park.jpg.webp'); background-size: cover;">
+    <h2>Albeta</h2><hr>
+    <p>Jasper National Park</p>
+    <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://pcacdn.azureedge.net/-/media/pn-np/yt/kluane/WET4/info/gestion-management/kluane-plan-review.jpg?modified=20190418214608'); background-size: cover;">
+    <h2>Yukon</h2><hr>
+    <p>Kluane National Park and Reserve</p>
+     <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://visitgrosmorne.com/wp-content/uploads/Western-Brook-Pond-Fjord-Gros-Morne-National-Park-Western-visit-gros-morne-800x533.jpg'); background-size: cover;">
+    <h2>NewFoundland And Labardor</h2><hr>
+    <p> Gros Morne National Park</p>
+    <button> Detail </button>
+  </div>
+
+</div>
+</div>
+</div>
+<br>
+
+
+<div class="bottom">
+<button>
+ <strong> Explore More </strong>
+    <center><img src="https://cdn-icons.flaticon.com/png/512/61/premium/61932.png?token=exp=1637159885~hmac=18de11fdc0327f531649bc0142bae9bd" width="20" height="40"> </center>
+ </button>
+</div>
+
+</div>
+</div>
+<br>
+
 
 <div class="bottomnavbar">
 
@@ -193,6 +383,10 @@ nav h3  p {
 <div class = "contact">
 
 <h2> Follow Us </h2>
+<img src="https://cdn-icons.flaticon.com/png/512/2504/premium/2504903.png?token=exp=1637161513~hmac=7532e46e68387bbe534636557f1eb065" width="40" height="50">
+<img style="margin-left:35px;" src="https://cdn-icons.flaticon.com/png/512/3621/premium/3621435.png?token=exp=1637162466~hmac=47a4ee54556af2a240facf4f5460cf66" width="45" height="55">
+<img style="margin-left:35px;" src="https://cdn-icons.flaticon.com/png/512/3256/premium/3256013.png?token=exp=1637162628~hmac=7a8de64e6c29b7ae704da5c34cb27908" width="45" height="55">
+
 
 </div>
 
