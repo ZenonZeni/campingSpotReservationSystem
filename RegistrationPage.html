@@ -55,7 +55,7 @@ header::after {
   vertical-align: top;
   width: 22%;
   margin-right: 0px;
- 
+
 }
 
 nav {
@@ -63,16 +63,15 @@ nav {
 }
 
 nav ul {
-  margin: 80;
-  padding: 0px;
+  margin: 20;
+  padding: 5px;
   list-style: none;
 }
 
 nav li {
   display: inline-block;
-  margin-left: 50px;
-  padding-top: 23px;
-
+  margin-left: 35px;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -92,11 +91,9 @@ nav a::before {
   display: block;
   height: 8px;
   background-color: #444;
-
   position: absolute;
   top: 0;
   width: 0%;
-
   transition: all ease-in-out 250ms;
 }
 
@@ -167,7 +164,7 @@ nav a:hover::before {
 
 
 #registration-form select[type=birthdate] {
- 
+
 float:left;
 font-size: 16px;
 
@@ -199,7 +196,7 @@ margin-top: -10px;
 
 #registration-form button {
 
-  text-align: center; 
+  text-align: center;
    width:65%;
    margin-left:18%;
    margin-right:80%;
@@ -224,6 +221,57 @@ margin-top: -10px;
   margin-right: 8px;
 
 }
+
+.bottomnavbar {
+	width: 100%;
+	margin: 0 auto;
+        overflow: hidden;
+        background-color: #55d6aa;
+        position: relative;
+        bottom: 0;
+
+}
+
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin-left: 120px;
+  margin-top: 20px;
+
+}
+
+nav h3  {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: -45px;
+
+}
+
+nav h3  p {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: 5px;
+ font-size: 15px;
+
+}
+
+.contact   {
+
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  right: 12%;
+
+}
+
+.contact h2 {
+
+ font-family: Tahoma, Verdana, sans-serif;
+ font-style: oblique;
+
+}
+
 </style>
 </head>
 
@@ -231,7 +279,7 @@ margin-top: -10px;
 
 <header>
     <div class="container">
-      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">  
+      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
 
       <nav>
         <ul>
@@ -245,14 +293,14 @@ margin-top: -10px;
       </nav>
     </div>
   </header>
-<br> 
+<br>
 <div>
    <form id="registration-form">
       <div>
             <h2> Sign Up </h2>
                   <h3> It's Quick And Easy </h3>
-           
-      
+
+
       </div>
 
       <input type="firstname" placeholder="First Name"/>
@@ -266,7 +314,7 @@ margin-top: -10px;
       <label type="gender"> Gender </label>
 </div>
 <div>
-      <select type="birthdate" > 
+      <select type="birthdate" >
           <option value="0">Year</option>
           <option value="1">2000</option>
           <option value="2">2001</option>
@@ -282,7 +330,7 @@ margin-top: -10px;
           <option value="12">2011</option>
      </select>
 
-      <select type="birthdate"> 
+      <select type="birthdate">
           <option value="0">Month</option>
           <option value="1">January</option>
           <option value="2">February</option>
@@ -297,7 +345,7 @@ margin-top: -10px;
           <option value="11">Noveremebr</option>
           <option value="12">December</option>
       </select>
-       <select type="birthdate" > 
+       <select type="birthdate" >
          <option value="0">Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -359,7 +407,27 @@ margin-top: -10px;
 
      </form>
 </div>
+</div>
+<br>
+<div class="bottomnavbar">
 
+<nav>
+
+   <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
+
+  <h3> @2021 Creative Camping Technology Group, Inc
+     <p> Privacy | Accessibility | Terms of Use </p>
+  </h3>
+
+<div class = "contact">
+
+<h2> Follow Us </h2>
+
+</div>
+
+
+</nav>
+</div>
 
 
 
