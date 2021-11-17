@@ -10,7 +10,8 @@ $accounts = array(
   array("zenon@my.yorku.ca","Password!"),
   array("zenonzeni@gmail.com","Password!"),
   array("ZenonZeni","Password!"),
-  array("random","123PHx!")
+  array("random","123PHx!"),
+  array("arslan10", "Password123!")
 );
 
 if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password']) && $_POST['password']) {
