@@ -3,9 +3,11 @@
 function checkCookie() {
   let user = getCookie("user");
   if (user == undefined) {
+	hideAccProfile();
 	console.log("No previous user has been found")
 	} 
 	else if(user!= undefined){
+		showAccProfile();
 		alert("Hi " + user.username + " | " + " Login Expires on: " + user.expireDate)
 	}
 	else {
