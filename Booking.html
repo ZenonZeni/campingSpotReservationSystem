@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+        height:100%;
+        padding:0;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+
+
+}
+
+header {
+  background: #55d6aa;
+
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+
+}
+
+nav {
+  float: right;
+
+}
+
+nav ul {
+  margin: 20;
+  padding: 5px;
+  list-style: none;
+
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 35px;
+  padding-top: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+.bottomnavbar {
+	width: 100%;
+	margin: 0 auto;
+        overflow: hidden;
+        background-color: #55d6aa;
+        position: relative;
+        margin-top: -20px;
+
+}
+
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+}
+
+nav h3  {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: -45px;
+
+}
+
+nav h3  p {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: 5px;
+ font-size: 15px;
+
+}
+
+.contact   {
+
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  right: 12%;
+
+}
+
+.contact h2 {
+
+ font-family: Tahoma, Verdana, sans-serif;
+ font-style: oblique;
+
+}
+
+
+
+#wrapper {
+    padding: 75px 0 75px 0;
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.container2 {
+
+   padding: 10px;
+
+}
+.container2 h1 {
+
+text-align: center;
+
+}
+
+
+
+.middle {
+    min-height:100%;
+     padding: 20px;
+    position:relative;
+
+
+}
+
+.middle h1 {
+
+   color: white;
+   font-size: 35px;
+
+}
+
+.bottom button  {
+
+
+    margin: auto;
+    width: 20%;
+    margin-left: 42%;
+    padding: 10px;
+    box-sizing:border-box;
+    border-radius: 35px;
+    font-size: 150%;
+    font-family:Arial;
+    font-style: oblique;
+    cursor: pointer;
+    background-color: DarkGreen;
+    color: lightgrey;
+    border: 10px solid #ccc;
+}
+
+#selectcampsite {
+
+  margin: auto;
+  width: 26%;
+  padding: 20px;
+  poistion: absolute;
+  margin-top: 15px;
+}
+button#selectcampsite {
+
+    padding: 15px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 30%;
+    padding: 15px;
+    poistion: relative;
+    margin-left: 80%;
+    margin-bottom: -10px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+
+#campsite  {
+
+    padding: 15px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+   cursor: pointer;
+}
+.wrap{
+    width:100%;
+}
+
+
+.blocks {
+    display: inline-block;
+    width: 100%;
+    poistion: absolute;
+}
+.blocks  h1 {
+    float: right;
+   color: white;
+
+}
+.blocks  ul{
+    padding: 5px;
+    font-size: 13px;
+   color: white;
+   float: left;
+   text-align: left;
+   poistion: relative;
+}
+
+.blocks select {
+  float:left;
+  cursor: pointer;
+}
+
+#campspot  {
+    padding: 8px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+input#date  {
+    position: absolute;
+    padding: 8px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: -12px;
+
+
+}
+label#date  {
+    position: absolute;
+    padding: 8px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-left: -18px;
+    margin-top: 5px;
+
+
+}
+
+
+button#book {
+
+    padding: 15px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 30%;
+    padding: 15px;
+    poistion: absolute;
+    margin-left: 65%;
+    margin-top: 80px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body onload ="checkCookie()">
+
+<header>
+    <div class="container">
+      <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="ExampleLogin.html">Login</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="Booking.html">Book Now!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<div id="wrapper">
+
+    <div class="middle">
+        <div class="container2">
+          <h1>  Book Your Camp Spot Online! </h1>
+          <hr>
+<div id="selectcampsite">
+    <select name="campsite" id="campsite" method="post">
+                                  <option name="" id="" value="0" >Select a Campsite</option>
+                                  <option name="" id="" value="1">Algonquin Provincial Park - Onatrio</option>
+                                  <option name="" id="" value="2">Banff National Park - Alberta </option>
+                                  <option name="" id="" value="3">Prince Edward Island National Park </option>
+                                  <option name="" id="" value="4">Tornagat Mountains National Park </option>                                                         Tornagat Mountains National Park
+</select>
+<button id="selectcampsite"> Next </button>
+</div>
+<hr>
+<br>
+<br>
+<div class='wrap'>
+    <div class = "blocks">
+<img style="border-radius: 60px;" src="https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg" width="50%" height="60%">
+
+<h1> Algonquin Provincial Park - Onatrio
+<p>
+<ul>
+         <li>Wide range of hiking and biking trails;</li>
+         <li>Superb fishing opportunities including world-class trout fishing;</li>
+         <li>Amazing wildlife viewing and photography opportunities;</li>
+         <li>Excellent birding opportunities with spring migrants along with some resident speciality birds; </li>
+         <li>Year-round options with each season offering unique and inspiring activities. </li>
+</ul>
+</p>
+<br></br>
+
+
+ <select name="campspot" id="campspot" method="post">
+                                  <option name="" id="" value="0">Select a Camping Spot</option>
+                                  <option name="" id="" value="1">Algonquin - Achray</option>
+                                  <option name="" id="" value="2">Algonquin - Backcountry</option>
+                                  <option name="" id="" value="3">Algonquin - Backcountry</option>
+                                  <option name="" id="" value="4">Algonquin - Brent</option>
+                                  <option name="" id="" value="5">Algonquin - Canisbay Lake</option>
+                                  <option name="" id="" value="6">Algonquin - Day Use Areas</option>
+</select>
+<br>
+<label id="date" style="font-size: 18px;">Select A Date: </label>
+<input type="date" id="date" value="">
+<button id="book"> BOOK </button>
+
+</h1>
+<hr>
+<br>
+</div>
+    <div class = "blocks">
+<img style="border-radius: 60px;" src="https://themilepost.com/wp-content/uploads/2020/11/banff-4368838_1920.jpg" width="50%" height="60%" >
+
+<h1> Banff National Park - Alberta
+<p>
+<ul>
+         <li>The park spans 6,641 square kilometres (2,564 square miles) of mountainous terrain, <br>
+             packed with spectacularly scenic valleys, peaks, glaciers, forests, meadows and rivers.</li>
+         <li>The bustling town of Banff and hamlet of Lake Louise are uniquely located in the National Park.</li>
+         <li>Fishing / Angling</li>
+         <li>Downhil Skiing</li>
+         <li>Hiking </li>
+</ul>
+</p>
+<br></br>
+
+
+ <select name="campspot" id="campspot" method="post">
+                                  <option name="" id="" value="0">Select a Camping Spot</option>
+                                  <option name="" id="" value="1">Moraine Lake</option>
+                                  <option name="" id=" value="2">Upper Hot Spings</option>
+                                  <option name="" id="" value="3">Vermilion Lakes</option>
+                                  <option name="" id="" value="4">Lake Louise</option>
+                                  <option name="" id="" value="5">Johnston Canyon</option>
+                                  <option name="" id="" value="6">Peyto Lake</option>
+</select>
+<br>
+<label id="date" style="font-size: 18px;">Select A Date: </label>
+<input type="date" id="date" value="">
+<button id="book"> BOOK </button>
+
+</h1>
+<hr>
+<br>
+</div>
+    <div class = "blocks">
+<img style="border-radius: 60px;" src="https://www.weddinginfashion.com/wp-content/uploads/2021/06/Prince-Edward-Island-National-Park.jpg" width="50%" height="60%" >
+
+<h1> Prince Edward Island National Park
+<p>
+<ul>
+         <li> Prince Edward Island National Park spans a spectacular stretch of land encompassing <br>
+              sand dunes salt marshes, remnants of an Acadian forest, coastal headlands, <br> beaches, and sandstone cliffs</li>
+         <li>Known best for its broad, sandy beaches, PEI National Park is more than just sun and surf.</li>
+         <li>Camping</li>
+         <li>Hiking</li>
+         <li>Cycling </li>
+</ul>
+</p>
+<br></br>
+
+
+ <select name="campspot" id="campspot" method="post">
+                                  <option name="" id="" value="0">Select a Camping Spot</option>
+                                  <option name="" id="" value="1">Cavendish Beach</option>
+                                  <option name="" id="" value="2">Brackley Beach</option>
+                                  <option name="" id="" value="3">Greenwich Interpretation Centre</option>
+                                  <option name="" id="" value="4">Cavendish Cliffs</option>
+                                  <option name="" id="" value="5">Cavendish Dunelands Trail</option>
+                                  <option name="" id="" value="6">Green Gables Golf Club </option>
+</select>
+<br>
+<label id="date" style="font-size: 18px;">Select A Date: </label>
+<input type="date" id="date" value="">
+<button id="book"> BOOK </button>
+</h1>
+</div>
+<hr>
+<br>
+</div>
+    <div class = "blocks">
+<img style="border-radius: 60px;" src="https://media-cdn.tripadvisor.com/media/photo-s/07/89/b6/53/torngat-mountains-national.jpg" width="50%" height="60%" >
+
+<h1> Tornagat Mountains National Park -  <br> NewFoundland And Labardo
+<p>
+<ul>
+         <li>The park contains several wildly different landscapes to check out. There are the Torngat
+               <br> Mountains, a mountain range with the highest peaks in eastern Canada.</li>
+         <li> It also has rugged cliffs, waterfalls and glaciers</li>
+         <li>AMountain climbing</li>
+         <li>Backcountry camping</li>
+         <li>Hiking</li>
+</ul>
+</p>
+<br></br>
+
+ <select name="campspot" id="campspot" method="post">
+                                  <option name="model1" id="model1" value="0">Select a Camping Spot</option>
+                                  <option name="model2" id="model2" value="1">Torngat Mountains - Koroc - Palmer River Loop Trail</option>
+                                  <option name="model3" id="model3" value="2">Torngat Mountains - Pitukkik (Nakvak Brook)</option>
+                                  <option name="model3" id="model3" value="3">Torngat Mountains National Park</option>
+
+</select>
+<br>
+<label id="date" style="font-size: 18px;">Select A Date: </label>
+<input type="date" id="date" value="">
+<button id="book"> BOOK </button>
+
+</h1>
+
+</div>
+<hr>
+</div>
+
+
+<br>
+
+
+<div class="bottom">
+<button>
+ <strong> View More </strong>
+    <center><img src="https://icon-library.com/images/arrow-pointing-down-icon/arrow-pointing-down-icon-4.jpg"  width="35" height="40"> </center>
+ </button>
+</div>
+
+</div>
+</div>
+<br>
+
+
+<div class="bottomnavbar">
+
+<nav>
+
+   <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
+
+  <h3> @2021 Creative Camping Technology Group, Inc
+     <p> Privacy | Accessibility | Terms of Use </p>
+  </h3>
+
+<div class = "contact">
+
+<h2> Follow Us </h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png" width="45" height="52">
+<img style="margin-left:35px;" src="https://icons-for-free.com/iconfiles/png/512/social+tweet+twitter+icon-1320192294140475236.png" width="50" height="60">
+
+
+</div>
+
+
+</nav>
+</div>
+
+</body>
+</html>
