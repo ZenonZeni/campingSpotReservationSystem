@@ -50,7 +50,6 @@ nav {
 }
 
 nav ul {
-  margin: 20;
   padding: 5px;
   list-style: none;
 
@@ -201,7 +200,6 @@ text-align: center;
   margin: auto;
   width: 26%;
   padding: 20px;
-  poistion: absolute;
   margin-top: 15px;
 }
 button#selectcampsite {
@@ -212,7 +210,6 @@ button#selectcampsite {
     font-size: 20px;
     width: 30%;
     padding: 15px;
-    poistion: relative;
     margin-left: 80%;
     margin-bottom: -10px;
     color: white;
@@ -220,7 +217,7 @@ button#selectcampsite {
     cursor: pointer;
 }
 
-#campsite  {
+.campsite  {
 
     padding: 15px;
     box-sizing:border-box;
@@ -236,7 +233,6 @@ button#selectcampsite {
 .blocks {
     display: inline-block;
     width: 100%;
-    poistion: absolute;
 }
 .blocks  h1 {
     float: right;
@@ -249,7 +245,6 @@ button#selectcampsite {
    color: white;
    float: left;
    text-align: left;
-   poistion: relative;
 }
 
 .blocks select {
@@ -257,7 +252,7 @@ button#selectcampsite {
   cursor: pointer;
 }
 
-#campspot  {
+.campspot  {
     padding: 8px;
     box-sizing:border-box;
     border-radius: 10px;
@@ -296,7 +291,6 @@ button#book {
     font-size: 20px;
     width: 30%;
     padding: 15px;
-    poistion: absolute;
     margin-left: 65%;
     margin-top: 80px;
     color: white;
@@ -304,10 +298,11 @@ button#book {
     cursor: pointer;
 }
 </style>
-
+<script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
+<script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 </head>
 
-<body onload ="checkCookie()">
+<body onload ="checkCookie();">
 
 <header>
     <div class="container">
@@ -334,20 +329,20 @@ button#book {
           <h1>  Book Your Camp Spot Online! </h1>
           <hr>
 <div id="selectcampsite">
-    <select name="campsite" id="campsite" method="post">
+    <select name="campsite" class="campsite" method="post">
                                   <option name="" id="" value="0" >Select a Campsite</option>
                                   <option name="" id="" value="1">Algonquin Provincial Park - Onatrio</option>
                                   <option name="" id="" value="2">Banff National Park - Alberta </option>
                                   <option name="" id="" value="3">Prince Edward Island National Park </option>
                                   <option name="" id="" value="4">Tornagat Mountains National Park </option>                                                         Tornagat Mountains National Park
-</select>
+				</select>
 <button id="selectcampsite"> Next </button>
 </div>
 <hr>
 <br>
 <br>
 <div class='wrap'>
-    <div class = "blocks">
+    <div class = "blocks" style="display:none;">
 <img style="border-radius: 60px;" src="https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg" width="50%" height="60%">
 
 <h1> Algonquin Provincial Park - Onatrio
@@ -363,7 +358,7 @@ button#book {
 <br></br>
 
 
- <select name="campspot" id="campspot" method="post">
+ <select name="campspot" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Algonquin - Achray</option>
                                   <option name="" id="" value="2">Algonquin - Backcountry</option>
@@ -381,7 +376,7 @@ button#book {
 <hr>
 <br>
 </div>
-    <div class = "blocks">
+    <div class = "blocks" style="display:none;>
 <img style="border-radius: 60px;" src="https://themilepost.com/wp-content/uploads/2020/11/banff-4368838_1920.jpg" width="50%" height="60%" >
 
 <h1> Banff National Park - Alberta
@@ -398,7 +393,7 @@ button#book {
 <br></br>
 
 
- <select name="campspot" id="campspot" method="post">
+ <select name="campspot" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Moraine Lake</option>
                                   <option name="" id=" value="2">Upper Hot Spings</option>
@@ -416,7 +411,7 @@ button#book {
 <hr>
 <br>
 </div>
-    <div class = "blocks">
+    <div class = "blocks" style="display:none;>
 <img style="border-radius: 60px;" src="https://www.weddinginfashion.com/wp-content/uploads/2021/06/Prince-Edward-Island-National-Park.jpg" width="50%" height="60%" >
 
 <h1> Prince Edward Island National Park
@@ -433,7 +428,7 @@ button#book {
 <br></br>
 
 
- <select name="campspot" id="campspot" method="post">
+ <select name="campspot" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Cavendish Beach</option>
                                   <option name="" id="" value="2">Brackley Beach</option>
@@ -451,7 +446,7 @@ button#book {
 <hr>
 <br>
 </div>
-    <div class = "blocks">
+    <div class = "blocks" style="display:none;">
 <img style="border-radius: 60px;" src="https://media-cdn.tripadvisor.com/media/photo-s/07/89/b6/53/torngat-mountains-national.jpg" width="50%" height="60%" >
 
 <h1> Tornagat Mountains National Park -  <br> NewFoundland And Labardo
@@ -467,7 +462,7 @@ button#book {
 </p>
 <br></br>
 
- <select name="campspot" id="campspot" method="post">
+ <select name="campspot" class="campspot" method="post">
                                   <option name="model1" id="model1" value="0">Select a Camping Spot</option>
                                   <option name="model2" id="model2" value="1">Torngat Mountains - Koroc - Palmer River Loop Trail</option>
                                   <option name="model3" id="model3" value="2">Torngat Mountains - Pitukkik (Nakvak Brook)</option>
