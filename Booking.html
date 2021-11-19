@@ -253,34 +253,15 @@ button#selectcampsite {
 }
 
 .campspot  {
-    padding: 8px;
+    padding: 18px;
     box-sizing:border-box;
     border-radius: 10px;
     font-size: 15px;
+    font-family:Sans-serif;
+    font-style: oblique;
 
 }
-input#date  {
-    position: absolute;
-    padding: 8px;
-    box-sizing:border-box;
-    border-radius: 10px;
-    font-size: 15px;
-    margin-top: 40px;
-    margin-left: -12px;
 
-
-}
-label#date  {
-    position: absolute;
-    padding: 8px;
-    box-sizing:border-box;
-    border-radius: 10px;
-    font-size: 13px;
-    margin-left: -18px;
-    margin-top: 5px;
-
-
-}
 
 
 button#book {
@@ -291,13 +272,119 @@ button#book {
     font-size: 20px;
     width: 30%;
     padding: 15px;
-    margin-left: 65%;
+    margin-left: 70%;
     margin-top: 80px;
     color: white;
     background-color: grey;
     cursor: pointer;
 }
+
+
+.insideblock {
+     display: inline-block;
+     border: solid 1px white;
+     width:80%;
+     margin: 5px auto;
+     padding: 10px;
+     margin-left: 120px;
+
+}
+
+.insideblock h2 {
+
+       font-size: 28px;
+       color: white;
+}
+.insideblock h4 {
+
+       font-size: 24px;
+       color: white;
+}
+.insideblock img {
+
+  border-radius: 25px;
+}
+
+.insideblock i{
+
+       font-size: 18px;
+       color: white;
+}
+.insideblock2 label {
+
+    padding: 0px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+
+
+
+}
+
+.insideblock2 input {
+
+
+    padding: 8px;
+    box-sizing:border-box;
+    border-radius: 15px;
+    font-size: 15px;
+
+
+}
+.insideblock2 {
+
+    float: right;
+    margin-right: 20%;
+    margin-top: 2%;
+
+
+
+}
+
+.insideblock2 h3 {
+
+   color: white;
+   font-size: 20px;
+
+
+}
+.accommodations {
+   padding: 8px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 13px;
+    font-style: oblique;
+    width: 100%;
+}
+.partsize {
+    padding: 8px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 15px;
+    font-style: oblique;
+    width: 25%;
+}
+.bookbutton button {
+    padding: 20px;
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 60%;
+    padding: 15px;
+    margin-left: 132%;
+    margin-top: -40px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+.insideblocklocation {
+
+      margin-top: 5%;
+
+}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 </head>
@@ -334,7 +421,7 @@ button#book {
                                   <option name="" id="" value="1">Algonquin Provincial Park - Onatrio</option>
                                   <option name="" id="" value="2">Banff National Park - Alberta </option>
                                   <option name="" id="" value="3">Prince Edward Island National Park </option>
-                                  <option name="" id="" value="4">Tornagat Mountains National Park </option>                                                         Tornagat Mountains National Park
+                                  <option name="" id="" value="4">Tornagat Mountains National Park </option>
 				</select>
 <button id="selectcampsite"> Next </button>
 </div>
@@ -342,7 +429,7 @@ button#book {
 <br>
 <br>
 <div class='wrap'>
-    <div class = "blocks" style="display:none;">
+    <div class = "blocks" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg" width="50%" height="60%">
 
 <h1> Algonquin Provincial Park - Onatrio
@@ -361,22 +448,112 @@ button#book {
  <select name="campspot" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Algonquin - Achray</option>
-                                  <option name="" id="" value="2">Algonquin - Backcountry</option>
                                   <option name="" id="" value="3">Algonquin - Backcountry</option>
                                   <option name="" id="" value="4">Algonquin - Brent</option>
                                   <option name="" id="" value="5">Algonquin - Canisbay Lake</option>
                                   <option name="" id="" value="6">Algonquin - Day Use Areas</option>
 </select>
 <br>
-<label id="date" style="font-size: 18px;">Select A Date: </label>
-<input type="date" id="date" value="">
-<button id="book"> BOOK </button>
+
+<button id="book"> Next </button>
 
 </h1>
-<hr>
+
+                    <div class="insideblock" style="display:none;"> <hr>
+                         <h2> Algonquin - Achray </h2>
+                            <i class="fa fa-map-marker"  margin-top: -10px;"> Achray Rd, Unorganized South Nipissing District, ON K0J, Canada <hr></i> <br>
+                         <div class="insideblock2">
+                       <label id="dateArrival" style="">Select Arrival: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                       <br><label id="dateDeparture" style="">Select Departure: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post">
+                                  <option name="" id="" value="0">Single Tent</option>
+                                  <option name="" id="" value="1">2 Tents</option>
+                                  <option name="" id="" value="2">3 Tents</option>
+                                  <option name="" id="" value="3">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select> 
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post">
+                                  <option name="" id="" value="0">1</option>
+                                  <option name="" id="" value="1">2 </option>
+                                  <option name="" id="" value="2">3 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select>
+                                  <br><div class="bookbutton">
+                                         <button> BOOK </button>
+                                  </div>
+                        </div>
+
+                       <br><img align src="https://www.planetware.com/wpimages/2020/04/canada-ontario-best-campgrounds-in-algonquin-provincial-park-achray-fall.jpg" width="55%" height="30%"><br> <br>
+               <div class="insideblocklocation">
+                       <hr> <h4> Location: </h4>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1412177.6776964157!2d-80.04888558196615!3d46.266
+                     933897552825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d2543b9d56813cf%3A0xe0e3ca7000a8d9ce!2sNipissing%20D
+                   istrict%2C%20ON!5e0!3m2!1sen!2sca!4v1637310705695!5m2!1sen!2sca" width="580" height="210" style="border-radius: 35px; display: block;
+                   margin-left: margin-right:auto; margin-top: -10px" allowfullscreen="" loading="lazy">
+                    </iframe> <br>
+
+               </div>
+
+                    </div>
+
+
+                    <div class="insideblock" style="display:none;"> <hr>
+                         <h2> Algonquin - Backcountry </h2>
+                            <i class="fa fa-map-marker"  margin-top: -10px;"> Ontario 60, Ontario K0J 2M0<hr></i> <br>
+                         <div class="insideblock2">
+                       <label id="dateArrival" style="">Select Arrival: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                       <br><label id="dateDeparture" style="">Select Departure: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post">
+                                  <option name="" id="" value="0">Single Tent</option>
+                                  <option name="" id="" value="1">2 Tents</option>
+                                  <option name="" id="" value="2">3 Tents</option>
+                                  <option name="" id="" value="3">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select>
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post">
+                                  <option name="" id="" value="0">1</option>
+                                  <option name="" id="" value="1">2 </option>
+                                  <option name="" id="" value="2">3 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select>
+                                  <br><div class="bookbutton">
+                                         <button> BOOK </button>
+                                  </div>
+                        </div>
+
+                       <br><img align src="https://i.redd.it/oy46dqtji4u31.jpg" width="55%" height="28%"><br>
+               <div class="insideblocklocation">
+                       <hr> <h4> Location: </h4>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.7064442448504!2d-78.38131258464202!3d45.8371590791072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd679c83c416dff%3A0x436dbbeb68f460eb!2sAlgonquin%20Provincial%20Park!5e0!3m2!1sen!2sca!4v1637321990469!5m2!1sen!2sca" width="580" height="210" style="border-radius: 35px; display: block;
+                   margin-left: margin-right:auto; margin-top: -10px" allowfullscreen="" loading="lazy">
+                    </iframe> <br>
+
+               </div>
+
+
+                    </div>
+
 <br>
 </div>
-    <div class = "blocks" style="display:none;>
+    <div class = "blocks" style="display:none"> <hr>
 <img style="border-radius: 60px;" src="https://themilepost.com/wp-content/uploads/2020/11/banff-4368838_1920.jpg" width="50%" height="60%" >
 
 <h1> Banff National Park - Alberta
@@ -403,15 +580,62 @@ button#book {
                                   <option name="" id="" value="6">Peyto Lake</option>
 </select>
 <br>
-<label id="date" style="font-size: 18px;">Select A Date: </label>
-<input type="date" id="date" value="">
-<button id="book"> BOOK </button>
+
+<button id="book"> Next </button>
 
 </h1>
-<hr>
-<br>
+
+                    <div class="insideblock" style="display:none;"> <hr>
+                         <h2> Moraine Lake </h2>
+                            <i class="fa fa-map-marker"  margin-top: -10px;"> Moraine Lake, Alberta<hr></i> <br>
+                         <div class="insideblock2">
+                       <label id="dateArrival" style="">Select Arrival: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                       <br><label id="dateDeparture" style="">Select Departure: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post">
+                                  <option name="" id="" value="0">Single Tent</option>
+                                  <option name="" id="" value="1">2 Tents</option>
+                                  <option name="" id="" value="2">3 Tents</option>
+                                  <option name="" id="" value="3">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select>
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post">
+                                  <option name="" id="" value="0">1</option>
+                                  <option name="" id="" value="1">2 </option>
+                                  <option name="" id="" value="2">3 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select>
+                                  <br><div class="bookbutton">
+                                         <button> BOOK </button>
+                                  </div>
+                        </div>
+
+                       <br><img align src="https://media-cdn.tripadvisor.com/media/photo-s/10/23/d3/72/moraine-lake.jpg" width="55%" height="30%"><br> <br>
+               <div class="insideblocklocation">
+                       <hr> <h4> Location: </h4>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9973.732941075212!2d-116.19369655709474!3d51.32155082367886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53775bcbf58ee517%3A0x42c8a7a2c3c05c95!2sMoraine%20Lake!5e0!3m2!1sen!2sca!4v1637323864939!5m2!1sen!2sca" width="580" height="210" style="border-radius: 35px; display: block;
+                   margin-left: margin-right:auto; margin-top: -10px" allowfullscreen="" loading="lazy">
+                    </iframe> <br>
+
+               </div>
+
+                    </div>
+
+
 </div>
-    <div class = "blocks" style="display:none;>
+
+
+<br>
+
+    <div class = "blocks" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://www.weddinginfashion.com/wp-content/uploads/2021/06/Prince-Edward-Island-National-Park.jpg" width="50%" height="60%" >
 
 <h1> Prince Edward Island National Park
@@ -438,15 +662,58 @@ button#book {
                                   <option name="" id="" value="6">Green Gables Golf Club </option>
 </select>
 <br>
-<label id="date" style="font-size: 18px;">Select A Date: </label>
-<input type="date" id="date" value="">
-<button id="book"> BOOK </button>
+
+<button id="book"> Next</button>
 </h1>
+
+                       <div class="insideblock" style="display:none;"> <hr>
+                         <h2> Cavendish Beach</h2>
+                            <i class="fa fa-map-marker"  margin-top: -10px;"> Cavendish Beach, Prince Edward Island National Park, 590 Graham's Ln, New Glasgow, PE C0A 1N0 <hr></i> <br>
+                         <div class="insideblock2">
+                       <label id="dateArrival" style="">Select Arrival: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                       <br><label id="dateDeparture" style="">Select Departure: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post">
+                                  <option name="" id="" value="0">Single Tent</option>
+                                  <option name="" id="" value="1">2 Tents</option>
+                                  <option name="" id="" value="2">3 Tents</option>
+                                  <option name="" id="" value="3">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select>
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post">
+                                  <option name="" id="" value="0">1</option>
+                                  <option name="" id="" value="1">2 </option>
+                                  <option name="" id="" value="2">3 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select>
+                                  <br><div class="bookbutton">
+                                         <button> BOOK </button>
+                                  </div>
+                        </div>
+
+                       <br><img align src="https://image.shutterstock.com/image-photo/cavendish-beach-on-canadas-prince-260nw-1832991607.jpg" width="55%" height="30%"><br> <br>
+               <div class="insideblocklocation">
+                       <hr> <h4> Location: </h4>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43949.51578008575!2d-63.41658949376081!3d46.491386756253135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5fbf8c4e8136ad%3A0xa583aca2bc5017d8!2sCavendish%20Beach%2C%20Prince%20Edward%20Island%20National%20Park!5e0!3m2!1sen!2sca!4v1637325409028!5m2!1sen!2sca" width="580" height="210" style="border-radius: 35px; display: block;
+                   margin-left: margin-right:auto; margin-top: -10px" allowfullscreen="" loading="lazy">
+                    </iframe> <br>
+
+               </div>
+
+                    </div>
 </div>
-<hr>
+
 <br>
 
-    <div class = "blocks" style="display:none;">
+    <div class = "blocks" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://media-cdn.tripadvisor.com/media/photo-s/07/89/b6/53/torngat-mountains-national.jpg" width="50%" height="60%" >
 
 <h1> Tornagat Mountains National Park -  <br> NewFoundland And Labardo
@@ -464,21 +731,63 @@ button#book {
 
  <select name="campspot" class="campspot" method="post">
                                   <option name="model1" id="model1" value="0">Select a Camping Spot</option>
-                                  <option name="model2" id="model2" value="1">Torngat Mountains - Koroc - Palmer River Loop Trail</option>
+                                  <option name="model2" id="model2" value="1">Torngat Mountains National Park</option>
                                   <option name="model3" id="model3" value="2">Torngat Mountains - Pitukkik (Nakvak Brook)</option>
-                                  <option name="model3" id="model3" value="3">Torngat Mountains National Park</option>
+                                  <option name="model3" id="model3" value="3">orngat Mountains - Koroc - Palmer River Loop Trail</option>
 
 </select>
 <br>
-<label id="date" style="font-size: 18px;">Select A Date: </label>
-<input type="date" id="date" value="">
-<button id="book"> BOOK </button>
+
+<button id="book"> Next </button>
 
 </h1>
+                        <div class="insideblock" style="display:none;"> <hr>
+                         <h2> Torngat Mountains National Park </h2>
+                            <i class="fa fa-map-marker"  margin-top: -10px;"> Torngat Mountains National Park, Torngat Mountains, Nain, NL A0P 1L0 <hr></i> <br>
+                         <div class="insideblock2">
+                       <label id="dateArrival" style="">Select Arrival: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                       <br><label id="dateDeparture" style="">Select Departure: </label><br>
+                        <input type="date" id="date" value=""> <br>
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post">
+                                  <option name="" id="" value="0">Single Tent</option>
+                                  <option name="" id="" value="1">2 Tents</option>
+                                  <option name="" id="" value="2">3 Tents</option>
+                                  <option name="" id="" value="3">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select>
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post">
+                                  <option name="" id="" value="0">1</option>
+                                  <option name="" id="" value="1">2 </option>
+                                  <option name="" id="" value="2">3 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select>
+                                  <br><div class="bookbutton">
+                                         <button> BOOK </button>
+                                  </div>
+                        </div>
+
+                       <br><img align src="https://photos.smugmug.com/North-America/Newfoundland/Torngat-Mountains-National-Par/i-B26dH8x/0/66a3d874/X2/GMA_4088-HDR-X2.jpg" width="55%" height="30%"><br> <br>
+               <div class="insideblocklocation">
+                       <hr> <h4> Location: </h4>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2041.486084581162!2d-63.99556348393193!3d59.2246050816223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c38e07b72921cb7%3A0xa7c4fa35a243ddb!2sTorngat%20Mountains%20National%20Park!5e0!3m2!1sen!2sca!4v1637326005999!5m2!1sen!2sca" width="580" height="210" style="border-radius: 35px; display: block;
+                   margin-left: margin-right:auto; margin-top: -10px" allowfullscreen="" loading="lazy">
+                    </iframe> <br>
+
+               </div>
+
+                    </div>
 
 </div>
-<hr>
 </div>
+<hr>
 </div>
 
 
