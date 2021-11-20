@@ -68,4 +68,3 @@ function setCookie(user, pass, days) {
 function eraseCookie() {
     document.cookie = 'COOKIE_NAME=; Max-Age=0; path=/; domain=' + location.host;
 }
-

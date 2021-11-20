@@ -385,6 +385,7 @@ button#book {
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 </head>
@@ -399,7 +400,7 @@ button#book {
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="ExampleLogin.html">Login</a></li>
+          <li><a href="ExampleLogin.html" id="login">Login</a></li>
           <li><a href="#">Gift Cards</a></li>
           <li><a href="#">Store</a></li>
           <li><a href="Booking.html">Book Now!</a></li>
@@ -416,20 +417,20 @@ button#book {
           <h1>  Book Your Camp Spot Online! </h1>
           <hr>
 <div id="selectcampsite">
-    <select name="campsite" class="campsite" method="post">
-                                  <option name="" id="" value="0" >Select a Campsite</option>
-                                  <option name="" id="" value="1">Algonquin Provincial Park - Onatrio</option>
-                                  <option name="" id="" value="2">Banff National Park - Alberta </option>
-                                  <option name="" id="" value="3">Prince Edward Island National Park </option>
-                                  <option name="" id="" value="4">Tornagat Mountains National Park </option>
+    <select name="campsite" id="campsite" class="campsite" method="post">
+                                  <option name="" id="campsite0" value="0" >Select a Campsite</option>
+                                  <option name="" id="campsite1" value="1">Algonquin Provincial Park - Onatrio</option>
+                                  <option name="" id="campsite2" value="2">Banff National Park - Alberta </option>
+                                  <option name="" id="campsite3" value="3">Prince Edward Island National Park </option>
+                                  <option name="" id="campsite4" value="4">Tornagat Mountains National Park </option>
 				</select>
-<button id="selectcampsite"> Next </button>
+				<script type="text/javascript" src="JavaScript&PHP/reservation.js"></script>
 </div>
 <hr>
 <br>
 <br>
 <div class='wrap'>
-    <div class = "blocks" style="display:none"><hr>
+    <div class = "blocks" id="camp-spot1" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg" width="50%" height="60%">
 
 <h1> Algonquin Provincial Park - Onatrio
@@ -445,21 +446,20 @@ button#book {
 <br></br>
 
 
- <select name="campspot" class="campspot" method="post">
+ <select name="campspot" id="camp-spot1-choices" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Algonquin - Achray</option>
-                                  <option name="" id="" value="3">Algonquin - Backcountry</option>
-                                  <option name="" id="" value="4">Algonquin - Brent</option>
-                                  <option name="" id="" value="5">Algonquin - Canisbay Lake</option>
-                                  <option name="" id="" value="6">Algonquin - Day Use Areas</option>
+                                  <option name="" id="" value="2">Algonquin - Backcountry</option>
+                                  <option name="" id="" value="3" disabled>Algonquin - Brent</option>
+                                  <option name="" id="" value="4" disabled>Algonquin - Canisbay Lake</option>
+                                  <option name="" id="" value="5" disabled>Algonquin - Day Use Areas</option>
 </select>
+	<script type="text/javascript" src="JavaScript&PHP/reservation.js"></script>
 <br>
-
-<button id="book"> Next </button>
 
 </h1>
 
-                    <div class="insideblock" style="display:none;"> <hr>
+                    <div class="insideblock" id="camp-spot1-choices-1" style="display:none;"> <hr>
                          <h2> Algonquin - Achray </h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Achray Rd, Unorganized South Nipissing District, ON K0J, Canada <hr></i> <br>
                          <div class="insideblock2">
@@ -506,7 +506,7 @@ button#book {
                     </div>
 
 
-                    <div class="insideblock" style="display:none;"> <hr>
+                    <div class="insideblock" id="camp-spot1-choices-2" style="display:none;"> <hr>
                          <h2> Algonquin - Backcountry </h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Ontario 60, Ontario K0J 2M0<hr></i> <br>
                          <div class="insideblock2">
@@ -553,7 +553,7 @@ button#book {
 
 <br>
 </div>
-    <div class = "blocks" style="display:none"> <hr>
+    <div class = "blocks" id="camp-spot2" style="display:none"> <hr>
 <img style="border-radius: 60px;" src="https://themilepost.com/wp-content/uploads/2020/11/banff-4368838_1920.jpg" width="50%" height="60%" >
 
 <h1> Banff National Park - Alberta
@@ -570,22 +570,21 @@ button#book {
 <br></br>
 
 
- <select name="campspot" class="campspot" method="post">
+ <select name="campspot" id="camp-spot2-choices" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Moraine Lake</option>
-                                  <option name="" id=" value="2">Upper Hot Spings</option>
-                                  <option name="" id="" value="3">Vermilion Lakes</option>
-                                  <option name="" id="" value="4">Lake Louise</option>
-                                  <option name="" id="" value="5">Johnston Canyon</option>
-                                  <option name="" id="" value="6">Peyto Lake</option>
+                                  <option name="" id="" value="2" disabled>Upper Hot Spings</option>
+                                  <option name="" id="" value="3" disabled>Vermilion Lakes</option>
+                                  <option name="" id="" value="4" disabled>Lake Louise</option>
+                                  <option name="" id="" value="5" disabled>Johnston Canyon</option>
+                                  <option name="" id="" value="6" disabled>Peyto Lake</option>
 </select>
+	<script type="text/javascript" src="JavaScript&PHP/reservation.js"></script>
 <br>
-
-<button id="book"> Next </button>
 
 </h1>
 
-                    <div class="insideblock" style="display:none;"> <hr>
+                    <div class="insideblock" id="camp-spot2-choices-1" style="display:none;"> <hr>
                          <h2> Moraine Lake </h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Moraine Lake, Alberta<hr></i> <br>
                          <div class="insideblock2">
@@ -635,7 +634,7 @@ button#book {
 
 <br>
 
-    <div class = "blocks" style="display:none"><hr>
+    <div class = "blocks" id="camp-spot3" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://www.weddinginfashion.com/wp-content/uploads/2021/06/Prince-Edward-Island-National-Park.jpg" width="50%" height="60%" >
 
 <h1> Prince Edward Island National Park
@@ -652,21 +651,21 @@ button#book {
 <br></br>
 
 
- <select name="campspot" class="campspot" method="post">
+ <select name="campspot" id="camp-spot3-choices" class="campspot" method="post">
                                   <option name="" id="" value="0">Select a Camping Spot</option>
                                   <option name="" id="" value="1">Cavendish Beach</option>
-                                  <option name="" id="" value="2">Brackley Beach</option>
-                                  <option name="" id="" value="3">Greenwich Interpretation Centre</option>
-                                  <option name="" id="" value="4">Cavendish Cliffs</option>
-                                  <option name="" id="" value="5">Cavendish Dunelands Trail</option>
-                                  <option name="" id="" value="6">Green Gables Golf Club </option>
+                                  <option name="" id="" value="2" disabled>Brackley Beach</option>
+                                  <option name="" id="" value="3" disabled>Greenwich Interpretation Centre</option>
+                                  <option name="" id="" value="4" disabked>Cavendish Cliffs</option>
+                                  <option name="" id="" value="5" disabled>Cavendish Dunelands Trail</option>
+                                  <option name="" id="" value="6" disabled>Green Gables Golf Club </option>
 </select>
+	<script type="text/javascript" src="JavaScript&PHP/reservation.js"></script>
 <br>
 
-<button id="book"> Next</button>
 </h1>
 
-                       <div class="insideblock" style="display:none;"> <hr>
+                       <div class="insideblock" id="camp-spot3-choices-1" style="display:none;"> <hr>
                          <h2> Cavendish Beach</h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Cavendish Beach, Prince Edward Island National Park, 590 Graham's Ln, New Glasgow, PE C0A 1N0 <hr></i> <br>
                          <div class="insideblock2">
@@ -713,7 +712,7 @@ button#book {
 
 <br>
 
-    <div class = "blocks" style="display:none"><hr>
+    <div class = "blocks" id="camp-spot4" style="display:none"><hr>
 <img style="border-radius: 60px;" src="https://media-cdn.tripadvisor.com/media/photo-s/07/89/b6/53/torngat-mountains-national.jpg" width="50%" height="60%" >
 
 <h1> Tornagat Mountains National Park -  <br> NewFoundland And Labardo
@@ -729,19 +728,17 @@ button#book {
 </p>
 <br></br>
 
- <select name="campspot" class="campspot" method="post">
+ <select name="campspot" id="camp-spot4-choices" class="campspot" method="post">
                                   <option name="model1" id="model1" value="0">Select a Camping Spot</option>
                                   <option name="model2" id="model2" value="1">Torngat Mountains National Park</option>
-                                  <option name="model3" id="model3" value="2">Torngat Mountains - Pitukkik (Nakvak Brook)</option>
-                                  <option name="model3" id="model3" value="3">orngat Mountains - Koroc - Palmer River Loop Trail</option>
-
+                                  <option name="model3" id="model3" value="2" disabled>Torngat Mountains - Pitukkik (Nakvak Brook)</option>
+                                  <option name="model3" id="model3" value="3" disabled>orngat Mountains - Koroc - Palmer River Loop Trail</option>
 </select>
+	<script type="text/javascript" src="JavaScript&PHP/reservation.js"></script>
 <br>
 
-<button id="book"> Next </button>
-
 </h1>
-                        <div class="insideblock" style="display:none;"> <hr>
+                        <div class="insideblock" id="camp-spot4-choices-1" style="display:none;"> <hr>
                          <h2> Torngat Mountains National Park </h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Torngat Mountains National Park, Torngat Mountains, Nain, NL A0P 1L0 <hr></i> <br>
                          <div class="insideblock2">
