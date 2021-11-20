@@ -15,6 +15,16 @@ function checkCookie() {
   }
 }
 
+function checkAccount() {
+	let user = getCookie("user");
+  if (user == undefined) {
+      return false;
+	}
+  else{
+    return true;
+  }
+}
+
 function getCookie(attribute) {
 	let x = attribute + "=";
 	let input = attribute;
