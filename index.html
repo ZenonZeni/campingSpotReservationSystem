@@ -293,7 +293,7 @@ font-style: oblique;
           <h1> Explore </h1>
           <hr>
 <br>
-<div class="row">
+<div class="row" id="row-1" >
   <div class="column" style="background-image: url('https://www.jaykerrphotography.com/portfolio/images/Kerr_20131003_5365.jpg'); background-size: cover;">
     <h2>Ontario</h2> <hr>
     <p>Algonquin Provincial Park </p>
@@ -314,7 +314,7 @@ font-style: oblique;
 <br>
 <br>
 
-<div class="row">
+<div class="row" id="row-2">
   <div class="column" style="background-image: url('https://assets3.thrillist.com/v1/image/2883194/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg'); background-size: cover;">
     <h2>Ontario</h2><hr>
     <p>Bruce Peninsula National Park</p>
@@ -336,7 +336,7 @@ font-style: oblique;
 <br>
 <br>
 
-<div class="row">
+<div class="row" id="row-3">
   <div class="column" style="background-image: url('https://sandinmysuitcase.com/wp-content/uploads/2021/01/Things-to-See-in-Jasper-National-Park.jpg.webp'); background-size: cover;">
     <h2>Albeta</h2><hr>
     <p>Jasper National Park</p>
@@ -354,16 +354,43 @@ font-style: oblique;
   </div>
 
 </div>
+<br>
+<br>
+<div class="row" id="row-4" style="display:none;">
+  <div class="column" style="background-image: url('https://media.istockphoto.com/photos/colourful-sunrise-clear-lake-manitoba-picture-id511473508'); background-size: cover;">
+    <h2>Manitoba</h2><hr>
+    <p>Riding Mountain National Park</p>
+    <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://glampinghub.com/blog/wp-content/uploads/2020/06/british-columbia-1-734x490.jpg'); background-size: cover;">
+    <h2>British Columbia</h2><hr>
+    <p>Gwaii Haanas National Park Reserve</p>
+     <button> Detail </button>
+  </div>
+  <div class="column" style="background-image: url('https://cdn4.tropicalsky.co.uk/images/800x600/pacific-rim-national-park-coastline.jpg'); background-size: cover;">
+    <h2>British Columbia</h2><hr>
+    <p>Pacific Rim National Park Reserve</p>
+    <button> Detail </button>
+  </div>
+
+
+
+</div>
 </div>
 </div>
 <br>
 
 
 <div class="bottom">
-<button>
+<button id="explore" onclick="myFunction()">
  <strong> Explore More </strong>
     <center><img src="https://icon-library.com/images/arrow-pointing-down-icon/arrow-pointing-down-icon-4.jpg"  width="35" height="40"> </center>
  </button>
+<script>
+function myFunction() {
+  document.getElementById("row-4").style.display  = "initial";
+}
+</script>
 </div>
 
 </div>
