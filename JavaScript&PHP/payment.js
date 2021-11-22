@@ -9,10 +9,10 @@ $(document).ready(function() {
 
 
 });
-$('body').click(function (event)
-{
-   if(!$(event.target).closest(".myBtn").length && !$(event.target).is(".myBtn")) {
-     $(".modal").css("display","none");
-   }
+$(document).click(function (e) {
+    if ($(e.target).is(".modal")) {
+        $(".modal").css("display","none");
+    }
+
 });
 });
