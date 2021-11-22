@@ -383,6 +383,66 @@ button#book {
       margin-top: 5%;
 
 }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 45%;
+}
+.modal-content h2 {
+
+ color: black;
+}
+.modal-content h4 {
+
+  color: black;
+  font-size: 22px;
+  margin-top: -10px;
+}
+
+.modal-content label {
+
+   color: black;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#paymentbutton {
+
+    margin-left: 100px;
+     border: 5px solid aqua;
+
+}
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -391,6 +451,7 @@ button#book {
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/checkServer.js"></script>
 <script>
+
 		checkServer();
 	</script>
 
@@ -493,12 +554,40 @@ button#book {
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button> BOOK </button>
-                                  </div>
+                                         <button class="myBtn"> BOOK </button>
+                                        <!-- The Modal -->
+                                              <div class="modal">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                               <h2>Payment Methods <hr></h2>
+                                                   <h4> Add Payment Method </h4>
+                                                          <input type="checkbox" id="creditcard" name="creditcard" value="">
+                                                              <label for="creditcard"> Credit Card</label><br>
+                                                              <input type="checkbox" id="debitcard" name="debitcard" value="">
+                                                       <label for="debitcard"> Debit Card</label><br></br>
+                                                      <label for="cardholdername"> Cardholder Name </label><br>
+                                                     <input type="cardholdername" style="width: 55%;"><br> <br>
+                                                      <label for="cardnumber"> Card Number </label><br>
+                                                     <input type="cardnumber" style="width: 55%;"><br> </br>
+                                                      <label for="expiredate"> Expiration Date</label>
+                                                      <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
+                                                  <input type="expiredate" placeholder="(MM/YY)"/>
+                                                     <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
+                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+
+   </div>
+</div>
+
+<script type="text/javascript" src="JavaScript&PHP/payment.js"></script>
+</div>
 							</section>
 
 
-                       <br><img align src="https://www.planetware.com/wpimages/2020/04/canada-ontario-best-campgrounds-in-algonquin-provincial-park-achray-fall.jpg" width="55%" height="30%"><br> <br>
+                       <br>
+
+                     <img align src="https://www.planetware.com/wpimages/2020/04/canada-ontario-best-campgrounds-in-algonquin-provincial-park-achray-fall.jpg" width="55%" height="30%"><br> <br>
                <div class="insideblocklocation">
                        <hr> <h4> Location: </h4>
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1412177.6776964157!2d-80.04888558196615!3d46.266
@@ -515,7 +604,7 @@ button#book {
                     <div class="insideblock" id="camp-spot1-choices-2" style="display:none;"> <hr>
                          <h2> Algonquin - Backcountry </h2>
                             <i class="fa fa-map-marker"  margin-top: -10px;"> Ontario 60, Ontario K0J 2M0<hr></i> <br>
-                         <div class="insideblock2">
+                         <div  class="insideblock2">
                        <label id="dateArrival" style="">Select Arrival: </label><br>
                         <input type="date" id="date" value=""> <br>
                        <br><label id="dateDeparture" style="">Select Departure: </label><br>
@@ -541,9 +630,35 @@ button#book {
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button> BOOK </button>
-                                  </div>
-                        </div>
+                                     <button class="myBtn"> BOOK </button>
+                                     <!-- The Modal -->
+                                              <div class="modal">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                               <h2>Payment Methods <hr></h2>
+                                                   <h4> Add Payment Method </h4>
+                                                          <input type="checkbox" id="creditcard" name="creditcard" value="">
+                                                              <label for="creditcard"> Credit Card</label><br>
+                                                              <input type="checkbox" id="debitcard" name="debitcard" value="">
+                                                       <label for="debitcard"> Debit Card</label><br></br>
+                                                      <label for="cardholdername"> Cardholder Name </label><br>
+                                                     <input type="cardholdername" style="width: 55%;"><br> <br>
+                                                      <label for="cardnumber"> Card Number </label><br>
+                                                     <input type="cardnumber" style="width: 55%;"><br> </br>
+                                                      <label for="expiredate"> Expiration Date</label>
+                                                      <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
+                                                  <input type="expiredate" placeholder="(MM/YY)"/>
+                                                     <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
+                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+
+                                       </div>
+
+                              </div>
+                    </div>
+                    <script type="text/javascript" src="JavaScript&PHP/payment.js"></script>
+        </div>
 
                        <br><img align src="https://i.redd.it/oy46dqtji4u31.jpg" width="55%" height="28%"><br>
                <div class="insideblocklocation">
@@ -619,9 +734,36 @@ button#book {
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button> BOOK </button>
-                                  </div>
-                        </div>
+                                         <button class="myBtn"> BOOK </button>
+                                  <!-- The Modal -->
+                                              <div class="modal">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                               <h2>Payment Methods <hr></h2>
+                                                   <h4> Add Payment Method </h4>
+                                                          <input type="checkbox" id="creditcard" name="creditcard" value="">
+                                                              <label for="creditcard"> Credit Card</label><br>
+                                                              <input type="checkbox" id="debitcard" name="debitcard" value="">
+                                                       <label for="debitcard"> Debit Card</label><br></br>
+                                                      <label for="cardholdername"> Cardholder Name </label><br>
+                                                     <input type="cardholdername" style="width: 55%;"><br> <br>
+                                                      <label for="cardnumber"> Card Number </label><br>
+                                                     <input type="cardnumber" style="width: 55%;"><br> </br>
+                                                      <label for="expiredate"> Expiration Date</label>
+                                                      <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
+                                                  <input type="expiredate" placeholder="(MM/YY)"/>
+                                                     <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
+                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+
+                                       </div>
+
+                              </div>
+                    </div>
+                    <script type="text/javascript" src="JavaScript&PHP/payment.js"></script>
+
+      </div>
 
                        <br><img align src="https://media-cdn.tripadvisor.com/media/photo-s/10/23/d3/72/moraine-lake.jpg" width="55%" height="30%"><br> <br>
                <div class="insideblocklocation">
@@ -700,9 +842,37 @@ button#book {
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button> BOOK </button>
-                                  </div>
-                        </div>
+                                         <button class="myBtn"> BOOK </button>
+                                  <!-- The Modal -->
+                                              <div class="modal">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                               <h2>Payment Methods <hr></h2>
+                                                   <h4> Add Payment Method </h4>
+                                                          <input type="checkbox" id="creditcard" name="creditcard" value="">
+                                                              <label for="creditcard"> Credit Card</label><br>
+                                                              <input type="checkbox" id="debitcard" name="debitcard" value="">
+                                                       <label for="debitcard"> Debit Card</label><br></br>
+                                                      <label for="cardholdername"> Cardholder Name </label><br>
+                                                     <input type="cardholdername" style="width: 55%;"><br> <br>
+                                                      <label for="cardnumber"> Card Number </label><br>
+                                                     <input type="cardnumber" style="width: 55%;"><br> </br>
+                                                      <label for="expiredate"> Expiration Date</label>
+                                                      <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
+                                                  <input type="expiredate" placeholder="(MM/YY)"/>
+                                                     <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
+                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+
+                                       </div>
+
+                              </div>
+                    </div>
+                    <script type="text/javascript" src="JavaScript&PHP/payment.js"></script>
+
+
+              </div>
 
                        <br><img align src="https://image.shutterstock.com/image-photo/cavendish-beach-on-canadas-prince-260nw-1832991607.jpg" width="55%" height="30%"><br> <br>
                <div class="insideblocklocation">
@@ -773,9 +943,36 @@ button#book {
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button> BOOK </button>
-                                  </div>
-                        </div>
+                                         <button class="myBtn"> BOOK </button>
+                                  <!-- The Modal -->
+                                              <div class="modal">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                               <h2>Payment Methods <hr></h2>
+                                                   <h4> Add Payment Method </h4>
+                                                          <input type="checkbox" id="creditcard" name="creditcard" value="">
+                                                              <label for="creditcard"> Credit Card</label><br>
+                                                              <input type="checkbox" id="debitcard" name="debitcard" value="">
+                                                       <label for="debitcard"> Debit Card</label><br></br>
+                                                      <label for="cardholdername"> Cardholder Name </label><br>
+                                                     <input type="cardholdername" style="width: 55%;"><br> <br>
+                                                      <label for="cardnumber"> Card Number </label><br>
+                                                     <input type="cardnumber" style="width: 55%;"><br> </br>
+                                                      <label for="expiredate"> Expiration Date</label>
+                                                      <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
+                                                  <input type="expiredate" placeholder="(MM/YY)"/>
+                                                     <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
+                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+
+                                       </div>
+
+                              </div>
+                    </div>
+                    <script type="text/javascript" src="JavaScript&PHP/payment.js"></script>
+
+           </div>
 
                        <br><img align src="https://photos.smugmug.com/North-America/Newfoundland/Torngat-Mountains-National-Par/i-B26dH8x/0/66a3d874/X2/GMA_4088-HDR-X2.jpg" width="55%" height="30%"><br> <br>
                <div class="insideblocklocation">
