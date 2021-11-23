@@ -1,6 +1,6 @@
 function showAccProfile(){
 	document.getElementById("login").innerHTML = "PROFILE";
-	document.getElementById("login").href ="#";
+	document.getElementById("login").href ="ProfilePage.html";
 }
 
 function hideAccProfile(){
