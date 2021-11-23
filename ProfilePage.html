@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 20;
+  padding: 5px;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 35px;
+  padding-top: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+.bottomnavbar {
+	width: 100%;
+	margin: 0 auto;
+        overflow: hidden;
+        background-color: #55d6aa;
+        position: relative;
+        margin-top: 70px;
+
+}
+
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+nav h3  {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: -45px;
+
+}
+
+nav h3  p {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: 5px;
+ font-size: 15px;
+
+}
+
+.contact   {
+
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  right: 12%;
+
+}
+
+.contact h2 {
+
+ font-family: Tahoma, Verdana, sans-serif;
+ font-style: oblique;
+
+}
+
+.account-contanier {
+
+     display: inline-block;
+     border: solid 1px;
+     width:80%;
+     margin: 50px auto;
+     padding: 50px;
+     margin-left: 100px;
+     background-color: AliceBlue;
+     box-shadow: 10px 10px 100px 50px grey;
+
+
+
+}
+.account-contanier h2 {
+ color: black;
+ font-size: 42px;
+ margin-top: 10px;
+
+}
+.side-bar {
+
+     float: left;
+     display: inline-block;
+     borader: solid 1px black;
+     width: 26%;
+     margin: 15px auto;
+     padding: 25px;
+     margin-legft: 120px;
+    background-color: AliceBlue;
+
+}
+.profile-image img  {
+
+ width: 135px;
+ height: 135px;
+ margin-left: 70px;
+
+}
+.profile-image h4 {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 25px;
+
+
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 22px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: -25px;
+  margin-top: 1px;
+  width: 118%;
+  text-align: left;
+
+
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.content-panel {
+     position: absolute;
+     float: left;
+     display: inline-block;
+     bordaer: solid 1px black;
+     width: 48%;
+     height: 81%;
+     margin: 15px auto;
+     padding: 25px;
+     margin-left: 30px;
+    background-color: AliceBlue;
+
+
+}
+.content-panel h2 {
+
+   color: black;
+   font-size: 38px;
+   margin-top: 50px;
+}
+
+
+
+.content-panel label {
+
+   font-size: 24px;
+
+}
+
+.content-panel input {
+
+    width: 40%;
+    font-size: 20px;
+    box-sizing:border-box;
+    border-radius: 5px;
+
+}
+
+.content-panel select {
+
+   font-size: 18px;
+}
+
+.updatebtn {
+
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 25%;
+    padding: 15px;
+    color: white;
+    background-color: DeepSkyBlue;
+    cursor: pointer;
+
+}
+
+.cancelbtn {
+
+    box-sizing:border-box;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 25%;
+    padding: 15px;
+    color: black;
+    background-color: Gainsboro;
+    cursor: pointer;
+
+}
+.vl {
+  border-left: 2px solid black;
+  height: 628px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 330px;
+}
+
+.v2 {
+  border-left: 2px solid black;
+  height: 628px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 0px;
+
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
+<script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
+<body onload ="checkCookie()">
+
+  <header>
+      <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
+
+        <nav>
+          <ul>
+											<script type="text/javascript" src="JavaScript&PHP/checks.js"></script>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="ExampleLogin.html" id="login">Login</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="Booking.html">Book Now!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <br>
+
+  <div>
+
+
+</div>
+<br>
+
+
+       <div class="account-contanier">
+            <h2> Account Settings </h2><hr>
+               <div class="vl"></div>
+               <div class="v2"></div>
+               <div class="side-bar">
+                 <div class="profile-image">
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                       <h4> XXX XXXX <hr> </h4> <br>
+                       <button class="btn" id="account-button"><i class="fa fa-home"></i> Account</button><br>
+                       <button class="btn" id="password-button"><i class="fa fa-key"></i> Password</button><br>
+                       <button class="btn" id="notification-button"><i class="fa fa-bell"></i> Notification</button><br>
+                       <button class="btn" id="reservation-button"><i class="fa fa-ticket"></i> View Existing Reservation</button>
+           <script type="text/javascript" src="JavaScript&PHP/accountsetting.js"></script>
+                 </div>
+              </div>
+             <div class= "content-panel" id="account-setting" style="display: inline-block;"></script>
+                 <h2> Account Settings </h2><br>
+  			<label for="textfirstname">First Name</label>
+                        <label for="textlastname" style= "margin-left: 25%;"> Last Name</label><br>
+			<input type="textfirstname"  value="XXX">
+			<input type="textlastname"  value="XXXX" style= "margin-left: 35px;"><br> <br>
+                        <br> </br>
+                        <label for="textemail">Email</label>
+			<label for="textlastname" style= "margin-left: 35%;"> Phone Number</label><br>
+			<input type="textemail"  value="XXXx@gmail.com">
+			<input type="textlastname"  value="+XXX-XXX-XXXX" style= "margin-left: 35px;"><br> <br>
+                        <label type="birthdate"> Date Of Birth </label><br>
+                        <select type="birthdate" >
+          <option value="0">Year</option>
+          <option value="1">2000</option>
+          <option value="2">2001</option>
+          <option value="3">2002</option>
+          <option value="4">2003</option>
+          <option value="5">2004</option>
+          <option value="6">2005</option>
+          <option value="7">2006</option>
+          <option value="8">2007</option>
+          <option value="9">2008</option>
+          <option value="10">2009</option>
+          <option value="11">2010</option>
+          <option value="12">2011</option>
+     </select>
+
+      <select type="birthdate">
+          <option value="0">Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">Apirl</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">Noveremebr</option>
+          <option value="12">December</option>
+      </select>
+       <select type="birthdate" >
+         <option value="0">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+
+       </select><br></br>
+                       </br><button class="updatebtn"> Update </button>
+                            <button class="cancelbtn"> Cancel </button>
+
+            </div>
+            <div class= "content-panel" id="password-setting" style="display:none">
+                 <h2> Password Settings </h2><br>
+                   <label for="textoldpassword"> Old Password</label> <br>
+                   <input type="textoldpassword" style= "font-size: 25px;">
+                    <br> </br>
+                    <label for="textemail">New Password</label>
+                    <label for="textlastname" style= "margin-left: 20%;"> Confirm New Password</label><br>
+		    <input type="textemail"  style= "font-size: 25px;">
+		    <input type="textlastname" style= "margin-left: 44px; font-size: 25px; width: 50%;"><br> <br>
+                   </br><br><button class="updatebtn"> Update </button>
+                            <button class="cancelbtn"> Cancel </button>
+           </div>
+          <div class= "content-panel" id="notification-setting" style="display:none">
+                  <h2> Notification Settings </h2><br>
+                        <h3> <bold> Would You Like To Recieve Notification about New Avaliability of Camp Sites? </bold> <hr></h3>
+                        <br>
+                     <input type="checkbox" id="yes" name="yescheckbox" style="padding: 40px;">
+                     <label for="yescheckbox" style=" margin-left: -110px; font-size: 18px;"> Yes</label><br>
+                     <input type="checkbox" id="no" name="nocheckbox" style="padding: 40px;">
+                     <label for="nocheckbox" style=" margin-left: -110px; font-size: 18px;"> No</label><br><br>
+                     </br><br><button class="updatebtn"> Update </button>
+                            <button class="cancelbtn"> Cancel </button>
+         </div>
+         <div class= "content-panel" id="reservation-setting" style="display:none">
+         </div>
+     </div>
+
+
+
+
+<br>
+<div class="bottomnavbar">
+
+<nav>
+
+   <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
+
+  <h3> @2021 Creative Camping Technology Group, Inc
+     <p> Privacy | Accessibility | Terms of Use </p>
+  </h3>
+
+<div class = "contact">
+
+<h2> Follow Us </h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://icons-for-free.com/iconfiles/png/512/social+tweet+twitter+icon-1320192294140475236.png" width="50" height="60">
+</div>
+
+
+</nav>
+</div>
+
+</body>
+</html>
+
+
+</body>
+</html>
