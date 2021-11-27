@@ -1,0 +1,19 @@
+Create Table Account for Account
+
+CREATE TABLE Account (account_id int NOT NULL AUTO_INCREMENT, account_name varchar(255) NOT NULL, 
+account_password varchar(255) NOT NULL,  account_type varchar(255), 
+phone DOUBLE, email varchar(255) NOT NULL, gender varchar(10), birthday varchar(30), 
+primary key(account_id));
+
+CREATE Table Account for Reservation depends on Account, Campsite, Campspot
+//Do this later
+
+CREATE Table for Campsite
+//Do this later
+
+CREATE Table for Camp spot
+//Do this later
+
+Insert Data for Account
+INSERT INTO Account (account_name, account_password, account_type, phone, email) 
+VALUES ("ZenonZeni", "Password!", "admin", "6473321467", "zenonzeni@hotmail.com");
