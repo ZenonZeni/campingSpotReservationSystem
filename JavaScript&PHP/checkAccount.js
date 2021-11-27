@@ -56,7 +56,7 @@ function getCookie(attribute) {
 }
 
 function setCookie(user, pass, days) {
-	eraseCookie();
+	eraseUser();
     var obj = {};//Creating custom object
 	var expires = "";
 	if (days!= 0){
@@ -75,6 +75,11 @@ function setCookie(user, pass, days) {
 	document.cookie = "user" + "=" + jsonString + ";" + "name=userInfo" + ";" + cookieExpire + ";path=/";  
 }
 
-function eraseCookie() {
-    document.cookie = 'COOKIE_NAME=; Max-Age=0; path=/; domain=' + location.host;
+function eraseCookie(cookieName) {
+    document.cookie = cookieName+'=; Max-Age=0; path=/; domain=' + location.host;
 }
+
+function eraseUser() {
+    document.cookie = 'user=; Max-Age=0; path=/; domain=' + location.host;
+}
+

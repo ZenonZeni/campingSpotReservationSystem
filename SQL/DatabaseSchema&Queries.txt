@@ -1,8 +1,9 @@
 Create Table Account for Account
 
-CREATE TABLE Account (account_id int NOT NULL AUTO_INCREMENT, account_name varchar(255) NOT NULL, 
-account_password varchar(255) NOT NULL,  account_type varchar(255), 
-phone DOUBLE, email varchar(255) NOT NULL, gender varchar(10), birthday varchar(30), 
+CREATE TABLE Account (account_id int NOT NULL AUTO_INCREMENT, username varchar(255) NOT NULL, account_fname varchar(255) NOT NULL, account_lname varchar(255) NOT NULL,
+email varchar(255) NOT NULL, phone DOUBLE, account_password varchar(255) NOT NULL,
+gender varchar(7) NOT NULL, birthyear varchar(5) NOT NULL, birthmonth varchar(3) NOT NULL, birthday varchar(50) NOT NULL, account_type varchar(3) NOT NULL, 
+notifications varchar(3) DEFAULT  'YES',
 primary key(account_id));
 
 CREATE Table Account for Reservation depends on Account, Campsite, Campspot
@@ -11,9 +12,14 @@ CREATE Table Account for Reservation depends on Account, Campsite, Campspot
 CREATE Table for Campsite
 //Do this later
 
-CREATE Table for Camp spot
+CREATE Table for Camp Spot
 //Do this later
 
+CREATE TABLE for Review
+
 Insert Data for Account
-INSERT INTO Account (account_name, account_password, account_type, phone, email) 
-VALUES ("ZenonZeni", "Password!", "admin", "6473321467", "zenonzeni@hotmail.com");
+INSERT INTO Account (username,account_fname,account_lname,email,phone,account_password,gender,birthyear,birthmonth,birthday,account_type) 
+VALUES ("ZenonZeni","Zenon","Zeni","zenonzeni@hotmail.com","6473321467","Password!","male","2000","11","37","A");
+
+INSERT INTO Account (username,account_fname,account_lname,email,phone,account_password,gender,birthyear,birthmonth,birthday,account_type) 
+VALUES ("admin","admin","admin","zenonzeni@hotmail.com","6473321467","Password!","male","2000","11","37","A");

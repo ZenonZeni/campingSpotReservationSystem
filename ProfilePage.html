@@ -505,7 +505,12 @@ label.star:before {
 <script type="text/javascript" src="JavaScript&PHP/checkServerLogin.js"></script>
 <script>
 		checkServer();
+		function signOut(){
+			eraseUser();
+			window.location.href = "index.html";
+		}
 </script>
+
 <body onload ="checkCookie()">
 
   <header>
@@ -546,7 +551,7 @@ label.star:before {
                        <button class="btn" id="password-button"><i class="fa fa-key"></i> Password</button><br>
                        <button class="btn" id="notification-button"><i class="fa fa-bell"></i> Notification</button><br>
                        <button class="btn" id="reservation-button"><i class="fa fa-ticket"></i> View Existing Reservation</button>
-                       <button class="btn" id="signout-button"><i class="fa fa-sign-out"></i> Sign Out </button>
+                       <button class="btn" id="signout-button" onclick="signOut()"><i class="fa fa-sign-out"></i> Sign Out </button>
            <script type="text/javascript" src="JavaScript&PHP/accountsetting.js"></script>
                  </div>
               </div>
