@@ -1,6 +1,6 @@
 <?php
 	
-	require_once('sqli_connect.php');
+	//require_once('sqli_connect.php');
 	
 	$username = "";
 	$fname = $_POST["firstname"];
@@ -15,7 +15,6 @@
 	$account_type = "c";
 	
 	$username = $email;
-	
 	
 	if($fname == "" or $lname == "" or $email == "" or $phone == "" or $account_password == "" or $birthyear == "0" or $birthmonth == "0" or $birthday == "0" or $gender == "0"){
 		$error[]= $fname;
