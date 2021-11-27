@@ -23,3 +23,8 @@ VALUES ("ZenonZeni","Zenon","Zeni","zenonzeni@hotmail.com","6473321467","Passwor
 
 INSERT INTO Account (username,account_fname,account_lname,email,phone,account_password,gender,birthyear,birthmonth,birthday,account_type) 
 VALUES ("admin","admin","admin","zenonzeni@hotmail.com","6473321467","Password!","male","2000","11","37","A");
+
+INSERT INTO Account (username,account_fname,account_lname,email,phone,account_password,gender,birthyear,birthmonth,birthday,account_type) 
+VALUES ("arslan10","arslan10","arslan10","arslan10@hotmail.com","6473321467","Password123!!","male","2000","11","37","A");
+
+

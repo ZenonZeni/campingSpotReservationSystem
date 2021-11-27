@@ -1,17 +1,15 @@
 <?php
 //by:Christopher Nguyen | 216213332
 //php file for login page
-
 // Array with names and password
+require_once('sqli_connect.php');
+
 $accounts = array(
   array("Anna","Password123!"),
   array("Guest","Password@"),
-  array("admin","Password!"),
   array("zenon@my.yorku.ca","Password!"),
   array("zenonzeni@gmail.com","Password!"),
-  array("ZenonZeni","Password!"),
   array("random","123PHx!"),
-  array("arslan10", "Password123!")
 );
 
 if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password']) && $_POST['password']) {
@@ -43,15 +41,37 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
     $validPassWord = false;
 
 
+	//SQL select
+	$sql = "SELECT username, account_password FROM account;";
+	$result = $conn->query($sql);
+	
+	//Check if database has the account
+	if ($result->num_rows > 0) {
+	  // output data of each row
+	  while($row = $result->fetch_assoc()) {
+		if($row["username"] == $username){
+			 $validUserName = true;
+			if($row["account_password"] == $password && $passwordErr ==""){
+				$passwordErr = "".$password."".$row["account_password"];
+				$validPassWord = true;
+				break;
+			}
+		}
+		}
+	}
+	
     //checks if account username & password match each other in Arrays
     for($i = 0; $i < count($accounts); $i++) {
       if ($accounts[$i][0] == $username) {
             $validUserName = true;
             if ($accounts[$i][1] == $password && $passwordErr == "") {
                   $validPassWord = true;
+				  break;
             }
       }
     }
+	
+	
 
 
     //Checks if login conditions are valid or not
