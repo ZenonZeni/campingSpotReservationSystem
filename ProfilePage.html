@@ -503,12 +503,15 @@ label.star:before {
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/checkServerLogin.js"></script>
+<script type="text/javascript" src="Profile_System/getUserInfo.js"></script>
 <script>
 		checkServer();
+		getUserInfo();
 		function signOut(){
 			eraseUser();
 			window.location.href = "index.html";
 		}
+		
 </script>
 
 <body onload ="checkCookie()">
@@ -559,46 +562,46 @@ label.star:before {
                  <h2> Account Settings </h2><br>
   			<label for="textfirstname">First Name</label>
                         <label for="textlastname" style= "margin-left: 145px;"> Last Name</label><br>
-			<input type="textfirstname"  value="XXX">
-			<input type="textlastname"  value="XXXX" style= "margin-left: 35px;"><br> <br>
+			<input type="textfirstname" id="firstName" value="XXX">
+			<input type="textlastname" id="lastName" value="XXXX" style= "margin-left: 35px;"><br> <br>
                         <br> </br>
                         <label for="textemail">Email</label>
 			<label for="textlastname" style= "margin-left: 210px;"> Phone Number</label><br>
-			<input type="textemail"  value="XXXx@gmail.com">
-			<input type="textlastname"  value="+XXX-XXX-XXXX" style= "margin-left: 35px;"><br> <br>
+			<input type="textemail" id="email"  value="XXXx@gmail.com">
+			<input type="textlastname" id="phone"  value="+XXX-XXX-XXXX" style= "margin-left: 35px;"><br> <br>
                         <label type="birthdate"> Date Of Birth </label><br>
-                        <select type="birthdate" >
+       <select type="birthdate" id="birthyear" value="0">
           <option value="0">Year</option>
-          <option value="1">2000</option>
-          <option value="2">2001</option>
-          <option value="3">2002</option>
-          <option value="4">2003</option>
-          <option value="5">2004</option>
-          <option value="6">2005</option>
-          <option value="7">2006</option>
-          <option value="8">2007</option>
-          <option value="9">2008</option>
-          <option value="10">2009</option>
-          <option value="11">2010</option>
-          <option value="12">2011</option>
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
      </select>
 
-      <select type="birthdate">
+      <select type="birthdate" id="birthmonth" value="0">
           <option value="0">Month</option>
           <option value="1">January</option>
           <option value="2">February</option>
           <option value="3">March</option>
-          <option value="4">Apirl</option>
+          <option value="4">April</option>
           <option value="5">May</option>
           <option value="6">June</option>
           <option value="7">July</option>
           <option value="8">August</option>
           <option value="9">September</option>
           <option value="10">October</option>
-          <option value="11">Noveremebr</option>
+          <option value="11">November</option>
           <option value="12">December</option>
       </select>
-       <select type="birthdate" >
+       <select type="birthdate" id="birthday" value="0">
          <option value="0">Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
