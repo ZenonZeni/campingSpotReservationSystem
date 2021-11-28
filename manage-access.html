@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 20;
+  padding: 5px;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 35px;
+  padding-top: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+
+.bottomnavbar {
+	width: 100%;
+	margin: 0 auto;
+  overflow: hidden;
+  background-color: #55d6aa;
+  position: relative;
+  margin-top: -20px;
+
+}
+
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+nav h3  {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: -45px;
+
+}
+
+nav h3  p {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: 5px;
+ font-size: 15px;
+
+}
+
+.contact   {
+
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  right: 12%;
+
+}
+
+.contact h2 {
+
+ font-family: Tahoma, Verdana, sans-serif;
+ font-style: oblique;
+
+}
+.main-1 {
+   float: left;
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  margin-left: 10px;
+}
+.main-1 h2 {
+
+   color: white;
+   margin-left: 35px;
+  font-family: Tahoma, Verdana, sans-serif;
+
+
+
+
+}
+
+#addUser-form {
+
+  margin: 0 auto;
+   color: white;
+  bordker: 15px solid #ccc;
+
+
+}
+#addUser-form p {
+  margin: -40px 0px -10px 0px;
+  text-shadow: 2px 2px 8px #FF0000;
+  padding: 20px;
+   color: white;
+}
+
+#addUser-form input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+#addUser-form input[type=firstname] {
+
+  float: left;
+  box-sizing: border-box;
+  width: 40%;
+  margin: 0 0 20px 0;
+  padding: 10px;
+
+}
+
+#addUser-form input[type=lastname] {
+
+  float: right;
+  box-sizing: border-box;
+  width: 45%;
+  margin: 0 0px 20px 0;
+  padding: 10px;
+
+}
+
+#addUser-form label[type=birth] {
+
+
+  font-size: 18px;
+  color: white;
+
+}
+
+#addUser-form label[type=gender] {
+
+   float: right;
+   color: white;
+   font-size: 18px;
+}
+
+
+#addUser-form select[type=birthdate] {
+
+float:left;
+font-size: 16px;
+
+}
+#addUser-form select[type=gender] {
+
+font-size: 16px;
+float:right;
+color:black;
+}
+
+.btn-add-users {
+
+  padding: 10px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: solid 2px white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main-2 {
+
+  float: left;
+  display: inline-block;
+
+  width: 400px;
+ height: 500px;
+  margin-left: 10px;
+}
+.main-2 h2 {
+
+   color: white;
+   margin-left: 35px;
+  font-family: Tahoma, Verdana, sans-serif;
+
+
+
+
+}
+.profile-image {
+
+background-color: white;
+ padding: 5px;
+ border-radius: 10px;
+ height: 350px;
+
+}
+
+.profile-image img  {
+
+ width: 60px;
+ height: 60px;
+ margin-left: 15px;
+ padding: 5px;
+
+}
+
+.main-3 {
+
+  float: left;
+  display: inline-block;
+  width: 400px;
+ height: 500px;
+  margin-left: 10px;
+}
+.main-3 h2 {
+
+   color: white;
+   margin-left: 35px;
+  font-family: Tahoma, Verdana, sans-serif;
+
+
+
+
+}
+
+.main-3 input {
+
+   padding: 10px;
+   margin-bottom: 10px;
+   width: 250px;
+   border-radius: 5px;
+   background-color: white;
+}
+
+.main-3 label {
+
+   margin-bottom: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+.main-3 select {
+
+   background-color: white;
+}
+
+.btn-more {
+
+   padding: 8px;
+  font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   wudth: 45px;
+  border-radius: 10px;
+}
+
+.modal-bookings {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+}
+
+
+
+.modal-bookings-content {
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 35%;
+  margin-bottom: 40px;
+  position: relative;
+
+
+}
+
+.close-booking {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-booking:hover,
+.close-booking:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-bookings-content h2 {
+
+ color: black;
+}
+
+.reservation-list {
+
+     dispjlay: inline-block;
+     backyground-color: white;
+     border-radius: 10px;
+     border: solid 2px black;
+
+
+
+}
+
+.reservation-btns {
+
+
+    margin-bottom: 2px;
+    padding: 5px;
+    width: 140px;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.modal-bookings-details {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+}
+
+
+
+.modal-bookings-details-content {
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 35%;
+  margin-bottom: 40px;
+  position: relative;
+
+
+}
+
+.close-booking-detail {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-booking-detail:hover,
+.close-booking-detail:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-bookings-details-content h2 {
+
+ color: black;
+}
+
+.btn-delete {
+
+
+   padding: 8px;
+  font-size: 15px;
+   margin-top: 10px;
+   cursor: pointer;
+   wudth: 45px;
+  border-radius: 10px;
+  background-color: red;
+  color: black;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
+<script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
+<body onload ="checkCookie()">
+
+  <header>
+      <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
+
+        <nav>
+          <ul>
+						<script type="text/javascript" src="JavaScript&PHP/checks.js"></script>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="ExampleLogin.html" id="login">Login</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#" onclick="pleaseLogin();">Book Now!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <br>
+<div class="main-1">
+   <h2> Add Users </h2><hr>
+<br>
+   <form id="addUser-form">
+
+
+      <input type="firstname" placeholder="First Name"/>
+      <input type="lastname" placeholder="Last Name"/>
+      <input type="email" placeholder="Phone Number or Email Address"/>
+      <input placeholder=" Generate Password"/>
+
+<div>
+      <label type="birth"> Date Of Birth </label>
+      <label type="gender"> Gender </label>
+</div>
+<div>
+      <select type="birthdate" >
+          <option value="0">Year</option>
+          <option value="1">2000</option>
+          <option value="2">2001</option>
+          <option value="3">2002</option>
+          <option value="4">2003</option>
+          <option value="5">2004</option>
+          <option value="6">2005</option>
+          <option value="7">2006</option>
+          <option value="8">2007</option>
+          <option value="9">2008</option>
+          <option value="10">2009</option>
+          <option value="11">2010</option>
+          <option value="12">2011</option>
+     </select>
+
+      <select type="birthdate">
+          <option value="0">Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">Apirl</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">Noveremebr</option>
+          <option value="12">December</option>
+      </select>
+       <select type="birthdate" >
+         <option value="0">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+
+       </select>
+
+   <select type="gender" >
+         <option value="0">Select Gender</option>
+         <option value="1">Male</option>
+         <option value="2">Female</option>
+   </select><br>
+<br>
+
+</div>
+  <button class="btn-add-users"> Add </button>
+</div>
+
+<div class="main-2">
+   <h2> Current Users  </h2><hr>
+                    <div class="profile-image" style="overflow-y:scroll;"> <span >
+                    <div id="profile-1" style="display: intial;">
+                       <img  src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                     <a id="user-1" href="#"> <h4 style="float: right; marg1in-right: 160px;"> Christopher Nguyen  </h4></a> </span> <br>  </div>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#">  <h4 style="float: right; mar1gin-right: 180px;"> Arslan Mahmood </h4> </a></span> <br>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#">  <h4 style="float: right; mar1gin-right: 180px;"> Shaswat Sharma  </h4> </a></span> <br>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#"> <h4 style="float: right; mar1gin-right: 180px;"> Rojean Noorinayer </h4></a></span> <br>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#">  <h4 style="float: right; mar1gin-right: 180px;"> Yu Shan  </h4> </span></a> <br>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#">  <h4 style="float: right; mar1gin-right: 210px;"> Beiqi Cai  </h4></a> </span> <br>
+                      <img src="https://static.thenounproject.com/png/363633-200.png"  alt="image-profile">
+                      <a href="#">  <h4 style="float: right; ma1rgin-right: 240px;"> Muhammad Alam  </h4></a> </span>
+                 </div>
+<br>
+
+</div>
+           <script type="text/javascript" src="JavaScript&PHP/manage-access.js"></script>
+<div class="main-3" style="display: none;" id="user-1-detail">
+   <h2> Details </h2><hr>
+<br>
+
+      <input type="text" placeholder="Christopher"/ disabled > <br>
+      <input type="text" placeholder="Nguyen"/ disabled> <br>
+      <input type="text" placeholder="zenonzeni@hotmail.com"/ disabled> <br>
+      <input type="text" placeholder="6473321467"/ disabled> <br>
+
+
+
+      <label type="birth"> Date Of Birth </label><br>
+      <select type="birthdate"  disabled>
+          <option value="0">Year</option>
+          <option value="1">2000</option>
+          <option value="2">2001</option>
+          <option value="3">2002</option>
+          <option value="4">2003</option>
+          <option value="5">2004</option>
+          <option value="6">2005</option>
+          <option value="7">2006</option>
+          <option value="8">2007</option>
+          <option value="9">2008</option>
+          <option value="10">2009</option>
+          <option value="11">2010</option>
+          <option value="12">2011</option>
+     </select>
+
+      <select type="birthdate" disabled>
+          <option value="0">Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">Apirl</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">Noveremebr</option>
+          <option value="12">December</option>
+      </select>
+       <select type="birthdate" disabled>
+         <option value="0">Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+
+       </select> <br>
+ <button class="btn-more" id="btn-more"> More... </button><br>
+ <div class="modal-bookings">
+
+                                               <!-- Modal content -->
+                                              <div class="modal-bookings-content">
+                                            <span class="close-booking">&times;</span>
+                                               <h3> All Bookings <hr></h3>
+                                                      <h4 class=""> Up Coming  </h4>
+                                                   <div class="reservation-list">
+                                                       <h4> Algonquin - Achray </h4>
+                                                   <i class="fa fa-map-marker"  margin-top: -10px;"> Achray Rd, Unorganized South Nipissing District, ON K0J, Canada <hr></i> <br>
+                                                 <button class="reservation-btns" id="btn-detail">   Details </button>
+                                                 <button class="reservation-btns"> Cancel Booking </button>
+                                                </div>
+                      <div class="modal-bookings-details">
+
+                                               <!-- Modal content -->
+                                                     <div class="modal-bookings-details-content">
+                                            <span class="close-booking-detail">&times;</span>
+                                               <h3>Algonquin - Achray<hr></h3>
+                                                <p style:"text-align:left; "> Pricing:
+                                                  <span style="float:right;">
+                                                        $30
+                                                       </span></p>
+                                                <p style:"text-align:left;"> Duration:
+                                                   <span style="float:right;">
+                                                        2 nights
+                                                       </span></p> <hr>
+
+
+                                      <label id="dateArrival" style="font-size: 14px; color: black;">Select Arrival: </label><br>
+                                            <input type="date" id="date" value="2021-11-27" disabled style="background-color: lightgrey;"><br>
+                                        <label id="dateDeparture" style="font-size: 14px; color: black;">Select Departure: </label><br>
+
+                                          <input type="date" id="date" value="2021-11-29" disabled style="background-color: lightgrey;">
+
+                        <br><h3> Add Accommodations: <hr></h3>
+                              <select name="accommodations" class="accommodations" method="post"  style="background-color: lightgrey;"disabled>
+                                  <option name="" id="" value="0">Trailer or RV up to 20ft (6.0m)</option>
+                                  <option name="" id="" value="1">Single Tent</option>
+                                  <option name="" id="" value="2">2 Tents</option>
+                                  <option name="" id="" value="3">3 Tents</option>
+                                  <option name="" id="" value="4">Trailer or RV up to 28ft (8.5m)</option>
+                                  <option name="" id="" value="5">Trailer or RV up to 35ft (10.6m)</option>
+                                  <option name="" id="" value="6">Trailer or RV up to 40ft (12.0m)</option>
+                             </select>
+                               <br><br><h3> Party Size: <hr></h3>
+                                 <select name="partysize" class="partsize" method="post" disabled style="background-color: lightgrey;">
+                                  <option name="" id="" value="0" >3</option>
+                                  <option name="" id="" value="1">1 </option>
+                                  <option name="" id="" value="2">2 </option>
+                                  <option name="" id="" value="3">4</option>
+                                  <option name="" id="" value="4">5</option>
+                                  <option name="" id="" value="5">6</option>
+                                  <option name="" id="" value="6">7</option>
+                             </select><br>
+
+                                       </div>
+                                    </div>
+                                                  <h4 class=""> Past Reservation  </h4>
+                                                   <div class="reservation-list">
+                                                       <h4> Torngat Mountains National Park </h4>
+                                                      <i class="fa fa-map-marker"  margin-top: -10px;"> Torngat Mountains National Park, Torngat Mountains, Nain, NL A0P 1L0 <hr></i> <br>
+                                                 <button class="reservation-btns"> See Review </button>
+                                                </div>
+                                            </div>
+                                     </div>
+ <button class="btn-delete" id="btn-delete"> Delete Account</button>
+
+
+</div>
+
+<br>
+<br>
+<div class="bottomnavbar">
+
+
+
+<nav>
+
+   <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
+
+  <h3> @2021 Creative Camping Technology Group, Inc
+     <p> Privacy | Accessibility | Terms of Use </p>
+     <a href="manage-access.html"> Manage Access</a>
+  </h3>
+
+<div class = "contact">
+
+<h2> Follow Us </h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://icons-for-free.com/iconfiles/png/512/social+tweet+twitter+icon-1320192294140475236.png" width="50" height="60">
+</div>
+
+
+</nav>
+</div>
+
+</body>
+</html>
