@@ -1,6 +1,6 @@
 <?php
 $servername = "1ocalhost:3306";
-$username = "root";
+$username = "root@localhost";
 $password = "Password123!";
 $dbname = "camping";
 
