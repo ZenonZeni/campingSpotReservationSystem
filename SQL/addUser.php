@@ -1,6 +1,6 @@
 <?php
 	
-	//require_once('sqli_connect.php');
+	require_once('sqli_connect.php');
 	
 	$username = "";
 	$fname = $_POST["firstname"];
