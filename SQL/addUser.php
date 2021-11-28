@@ -26,6 +26,7 @@
 		$error[]= $birthmonth;
 		$error[]= $birthday;
 		$error[]= $gender;
+		$conn->close();
 		echo json_encode(array('success' => 0, 'error' => $error));
 		//'Please Enter Valid INPUTS | Note: Must fill in all in registration page'
 	}
@@ -39,10 +40,9 @@
 		} else {
 			$errortype = $sql;
 			$errorText = $conn->error;
+			$conn->close();
 			echo json_encode(array('success' => 2 ,'error' => $errortype, 'errorText' => $errorText));
+			
 		}
 	}
-
-	$conn->close();
-
 ?>
