@@ -7,12 +7,8 @@ require_once('sqli_connect.php');
 $accounts = array(
   array("Anna","Password123!"),
   array("Guest","Password@"),
-  array("admin","Password!"),
-  array("zenon@my.yorku.ca","Password!"),
   array("zenonzeni@gmail.com","Password!"),
-  array("ZenonZeni","Password!"),
   array("random","123PHx!"),
-  array("arslan10", "Password123!")
 );
 
 if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password']) && $_POST['password']) {
@@ -45,7 +41,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 
 
 	//SQL select
-	$sql = "SELECT username, account_password FROM account;";
+	$sql = "SELECT username, account_password FROM Account;";
 	$result = $conn->query($sql);
 	
 	//Check if database has the account
@@ -53,8 +49,8 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 	   //output data of each row
 	  while($row = $result->fetch_assoc()) {
 		if($row["username"] == $username){
-			 $validUserName = true;
 			if($row["account_password"] == $password && $passwordErr ==""){
+				$validUserName = true;
 				$passwordErr = "".$password."".$row["account_password"];
 				$validPassWord = true;
 				$conn->close();
@@ -66,12 +62,12 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 	
     //checks if account username & password match each other in Arrays
     for($i = 0; $i < count($accounts); $i++) {
-      if ($accounts[$i][0] == $username) {
+      if ($accounts[$i][0] == $username ) {
             $validUserName = true;
             if ($accounts[$i][1] == $password && $passwordErr == "") {
                   $validPassWord = true;
 				  break;
-            }
+           }
       }
     }
 	
