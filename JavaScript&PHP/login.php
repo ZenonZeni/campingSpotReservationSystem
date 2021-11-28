@@ -50,7 +50,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 	
 	//Check if database has the account
 	if ($result->num_rows > 0) {
-	   output data of each row
+	   //output data of each row
 	  while($row = $result->fetch_assoc()) {
 		if($row["username"] == $username){
 			 $validUserName = true;
@@ -75,9 +75,6 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
       }
     }
 	
-	
-
-
     //Checks if login conditions are valid or not
     if($validUserName && $validPassWord){
         echo json_encode(array('success' => 1, 'username' => $username, 'password' => $password));

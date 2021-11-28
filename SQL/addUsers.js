@@ -14,7 +14,7 @@ $(document).ready(function() {
 				else if(response == 1){
 					eraseUser();
                     alert('Account Created Successfully, Please Login before proceeding');
-                    window.location.href = "exampleLogin.html";
+                    window.location.href = "ExampleLogin.html";
 				}
 				else{
 					alert("Something went wrong creating the account in the query error:" + response);
