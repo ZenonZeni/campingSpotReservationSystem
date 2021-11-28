@@ -49,8 +49,8 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 	   //output data of each row
 	  while($row = $result->fetch_assoc()) {
 		if($row["username"] == $username){
+			$validUserName = true;
 			if($row["account_password"] == $password && $passwordErr ==""){
-				$validUserName = true;
 				$passwordErr = "".$password."".$row["account_password"];
 				$validPassWord = true;
 				$conn->close();
