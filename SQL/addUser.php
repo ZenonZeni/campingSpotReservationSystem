@@ -27,7 +27,7 @@
 		$error[]= $birthday;
 		$error[]= $gender;
 		$conn->close();
-		echo json_encode(array('success' => 0, 'error' => $error));
+		echo 0;
 		//'Please Enter Valid INPUTS | Note: Must fill in all in registration page'
 	}
 	else{
@@ -35,13 +35,13 @@
 		VALUES ('".$email."','".$fname."','".$lname."','".$email."','".$phone."','".$account_password."','".$gender."','".$birthyear."','".$birthmonth."','".$birthday."','C');";
 		
 		if ($conn->query($sql) === TRUE) {
-		  echo json_encode(array('success' => 1));
+		  echo 1;
 		  //New record created successfully
 		} else {
 			$errortype = $sql;
 			$errorText = $conn->error;
 			$conn->close();
-			echo json_encode(array('success' => 2 ,'error' => $errortype, 'errorText' => $errorText));
+			echo "".$errortype."".$errorText."";
 			
 		}
 	}
