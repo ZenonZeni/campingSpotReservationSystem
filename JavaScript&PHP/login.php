@@ -57,6 +57,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 			if($row["account_password"] == $password && $passwordErr ==""){
 				$passwordErr = "".$password."".$row["account_password"];
 				$validPassWord = true;
+				$conn->close();
 				break;
 			}
 		}
