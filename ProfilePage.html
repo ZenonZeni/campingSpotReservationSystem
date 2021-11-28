@@ -513,7 +513,11 @@ label.star:before {
 		}
 
 </script>
-
+<script>
+function checkType(){
+	manageAccess();
+}
+</script>
 <body onload ="checkCookie()">
 
   <header>
@@ -802,7 +806,7 @@ label.star:before {
 
   <h3> @2021 Creative Camping Technology Group, Inc
      <p> Privacy | Accessibility | Terms of Use </p>
-          <a href="manage-access.html"> Manage Access</a>
+          <a href="#" onclick="javascript:checkType()"> Manage Access</a>
   </h3>
 
 <div class = "contact">

@@ -3,12 +3,15 @@
 function checkCookie() {
   let user = getCookie("user");
   if (user == undefined) {
-	hideAccProfile();
-	console.log("No previous user has been found");
+		hideAccProfile();
+		console.log("No previous user has been found");
 	} 
 	else if(user!= undefined){
 		showAccProfile();
 		alert("Hi " + user.username + " | " + " Login Expires on: " + user.expireDate);
+		if(user.accountType == "A"){
+			
+		}
 	}
 	else {
 	  console.log("No previous user has been found");
@@ -55,7 +58,7 @@ function getCookie(attribute) {
 	}
 }
 
-function setCookie(user, pass, days) {
+function setCookie(user, pass, type, days) {
 	eraseUser();
     var obj = {};//Creating custom object
 	var expires = "";
@@ -64,10 +67,12 @@ function setCookie(user, pass, days) {
         date.setTime(date.getTime() + (days*24*60*60*1000));
         expires = date.toUTCString();
 		cookieExpire = "expires=" + date.toUTCString();
+		alert(cookieExpire)
 	}
     obj.username = user;
     obj.password = pass;
 	obj.expireDate = expires;
+	obj.accountType = type;
   
 	//Converting JavaScript object to JSON string      
 	var jsonString = JSON.stringify(obj);  

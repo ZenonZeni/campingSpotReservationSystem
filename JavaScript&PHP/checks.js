@@ -4,7 +4,7 @@ function bookNow(){
     window.location.href = "Booking.html";
   }
   else{
-    alert("You need to log-in - Redirecting");
+    pleaseLogin();
     window.location.href = "ExampleLogin.html";
   }
 }

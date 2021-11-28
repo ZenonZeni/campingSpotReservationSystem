@@ -463,7 +463,11 @@ background-color: white;
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
 <body onload ="checkCookie()">
-
+<script>
+function checkType(){
+	manageAccess();
+}
+</script>
   <header>
       <div class="container">
         <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
@@ -476,7 +480,7 @@ background-color: white;
             <li><a href="ExampleLogin.html" id="login">Login</a></li>
             <li><a href="#">Gift Cards</a></li>
             <li><a href="#">Store</a></li>
-            <li><a href="#" onclick="pleaseLogin();">Book Now!</a></li>
+            <li><a href="#" onclick="bookNow();">Book Now!</a></li>
           </ul>
         </nav>
       </div>
@@ -488,10 +492,11 @@ background-color: white;
    <form id="addUser-form">
 
 
-      <input type="firstname" placeholder="First Name"/>
-      <input type="lastname" placeholder="Last Name"/>
-      <input type="email" placeholder="Phone Number or Email Address"/>
-      <input placeholder=" Generate Password"/>
+      <input type="firstname" placeholder="First Name"/></input>
+      <input type="lastname" placeholder="Last Name"/></input>
+      <input type="email" placeholder="Phone Number or Email Address"/></input>
+	  <input type="phone" placeholder="Phone"> </input>
+      <input placeholder=" Generate Password"/></input>
 
 <div>
       <label type="birth"> Date Of Birth </label>
@@ -573,8 +578,10 @@ background-color: white;
 <br>
 
 </div>
-  <button class="btn-add-users"> Add </button>
+  <button type="submit" class="btn-add-users"> Add </button>
 </div>
+
+</form>
 
 <div class="main-2">
    <h2> Current Users  </h2><hr>
@@ -753,15 +760,13 @@ background-color: white;
 <br>
 <div class="bottomnavbar">
 
-
-
 <nav>
 
    <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
 
   <h3> @2021 Creative Camping Technology Group, Inc
      <p> Privacy | Accessibility | Terms of Use </p>
-     <a href="manage-access.html"> Manage Access</a>
+     <a href="#" onclick="javascript:checkType()"> Manage Access</a>
   </h3>
 
 <div class = "contact">

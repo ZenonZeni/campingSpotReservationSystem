@@ -38,10 +38,12 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
     $validUserName = false;
 
     $validPassWord = false;
+	
+	$accountType = "";
 
 
 	//SQL select
-	$sql = "SELECT username, account_password FROM Account;";
+	$sql = "SELECT username, account_password, account_type FROM Account;";
 	$result = $conn->query($sql);
 	
 	//Check if database has the account
@@ -52,6 +54,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 			$validUserName = true;
 			if($row["account_password"] == $password && $passwordErr ==""){
 				$passwordErr = "".$password."".$row["account_password"];
+				$accountType = $row["account_type"];
 				$validPassWord = true;
 				$conn->close();
 				break;
@@ -73,7 +76,7 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
 	
     //Checks if login conditions are valid or not
     if($validUserName && $validPassWord){
-        echo json_encode(array('success' => 1, 'username' => $username, 'password' => $password));
+        echo json_encode(array('success' => 1, 'username' => $username, 'password' => $password, 'accountType' => $accountType));
     }
     else if($validUserName == false){
       echo json_encode(array('success' => 2));

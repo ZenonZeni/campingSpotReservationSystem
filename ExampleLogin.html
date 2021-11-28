@@ -186,6 +186,11 @@ nav h3  p {
 </head>
 <script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
 <script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
+<script>
+function checkType(){
+	manageAccess();
+}
+</script>
 <body onload ="checkCookie()">
 
   <header>
@@ -232,7 +237,7 @@ nav h3  p {
 
   <h3> @2021 Creative Camping Technology Group, Inc
      <p> Privacy | Accessibility | Terms of Use </p>
-          <a href="manage-access.html"> Manage Access</a>
+          <a href="#" onclick="javascript:checkType()"> Manage Access</a>
   </h3>
 
 <div class = "contact">
