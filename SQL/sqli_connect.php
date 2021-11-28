@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "admin";
-$password = "Password123!";
+$password = 'Password123!';
 $dbname = "camping";
 
 // Create connection to sql server
