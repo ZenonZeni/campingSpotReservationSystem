@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+
+        background-color: #cccccc;
+	margin: 0;
+        background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 0px;
+
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 20;
+  padding: 5px;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 35px;
+  padding-top: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+
+.bottomnavbar {
+	width: 100%;
+	margin: 0 auto;
+  overflow: hidden;
+  background-color: #55d6aa;
+  position: relative;
+  margin-top: -20px;
+
+}
+
+.logo1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+nav h3  {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: -45px;
+
+}
+
+nav h3  p {
+ font-family: Copperplate, Papyrus, fantasy;
+ text-align: center;
+ margin-top: 5px;
+ font-size: 15px;
+
+}
+
+.contact   {
+
+  display: inline-block;
+  position: absolute;
+  top: 28%;
+  right: 12%;
+
+}
+
+.contact h2 {
+
+ font-family: Tahoma, Verdana, sans-serif;
+ font-style: oblique;
+
+}
+.main {
+  margin-top: -21px;
+  width: 100%;
+  height: 310px;
+  border-bottom: solid 5px black;
+  background-image: url("https://ak.picdn.net/shutterstock/videos/1040969234/thumb/1.jpg");
+  color: white;
+
+}
+.main-h1 {
+
+  padding: 80px;
+ text-align: center;
+font-style: italic;
+font-family:Lucida Console;
+
+}
+.main-p {
+
+  text-align: center;
+ font-style: italic;
+ font-family:Lucida Console;
+ font-size: 15px;
+ margin-top: -65px;
+
+}
+
+.main-1 {
+
+  padding: 20px;
+  float: left;
+  width: 330px;
+  height: 630px;
+ borjder: solid 1px white;
+ margin-left: 50px;
+ margin-bottom: 5px;
+ color: white;
+ font-size: 22px;
+ font-family:Lucida Console;
+
+}
+
+.mandate-img {
+
+  height: 220px;
+  border: solid 1px white;
+  background-image: url("https://static8.depositphotos.com/1035123/940/i/950/depositphotos_9406707-stock-photo-information-technology-background.jpg");
+  background-size: cover;
+}
+
+
+.vision-img {
+
+  height: 220px;
+  border: solid 1px white;
+  background-image: url("https://thumbs.dreamstime.com/b/abstract-eye-background-vision-concept-d-rendering-105098094.jpg");
+  background-size: cover;
+}
+.mission-img {
+
+  height: 220px;
+  border: solid 1px white;
+  background-image: url("https://wallpaperaccess.com/full/3654999.jpg");
+  background-size: cover;
+
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<script type="text/javascript" src="JavaScript&PHP/checkAccount.js"></script>
+<script type="text/javascript" src="JavaScript&PHP/profileAccount.js"></script>
+<body onload ="checkCookie()">
+
+  <header>
+      <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo">
+
+        <nav>
+          <ul>
+						<script type="text/javascript" src="JavaScript&PHP/checks.js"></script>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About-Us.html">About</a></li>
+            <li><a href="ExampleLogin.html" id="login">Login</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#" onclick="pleaseLogin();">Book Now!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<div class="main">
+
+  <h1 class="main-h1"> About Creative Camping <br>Technology Group </h1>
+ <p class="main-p" >Our Mission is to provide campers and visitors with a campground
+     facility that is family oriented, kid friendly, safe and well maintained. We welcome new comers, tourist; We are here to guide
+    and provide you with the best camping sites in Canada.  </p>
+</div>
+
+<h2 style="color: white; text-align: center; font-style: italic;  font-size: 28px; margin-top: 50px;"> WHO WE ARE ? </h2>
+
+<div class="main-1">
+ <div class="mandate-img">
+</div>
+
+ <h3> Mandate </h3>
+<h5>  "To provide tourism, cultural, and educational opportunities
+      for residents of Canada and visitors through the presentation
+      and interpretation of historic attractions and the development and operation of
+      parks and campgrounds. <br> <br> As a key economic driver in Canada, our company
+      will focus efforts on new product development and program enhancements that will
+     draw new and returning customers to the parks and campgrounds all over Canada." </h5>
+</div>
+
+ <div class="main-1">
+
+ <div class="vision-img">
+</div>
+  <h3> Vision </h3>
+<h5> "Tourism, recreation, heritage and cultural experiences in all over Canada
+   are sustained, enjoyed and accessible today, tomorrow and for
+  future generations." </h5>
+</div>
+
+  <div class="main-1">
+ <div class="mission-img">
+</div>
+ <h3> Mission </h3>
+<h5> "The purpose of the 'Creative Camping Technology Group' is to provide, preserve
+      and advocate for our parks, our heritage assets and our environment through
+    operations and partnerships that contribute to an exceptional customer experience
+    and economic prosperity in all over Canada." </h5>
+</div>
+
+<br>
+<div class="bottomnavbar">
+
+
+
+<nav>
+
+   <img src="https://cdn.discordapp.com/attachments/885589602205843537/904570858163560468/Camp_logo-02.png"  alt="logo" class="logo1">
+
+  <h3> @2021 Creative Camping Technology Group, Inc
+     <p> Privacy | Accessibility | Terms of Use </p>
+     <a href="manage-access.html"> Manage Access</a>
+  </h3>
+
+<div class = "contact">
+
+<h2> Follow Us </h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png" width="45" height="55">
+<img style="margin-left:35px;" src="https://icons-for-free.com/iconfiles/png/512/social+tweet+twitter+icon-1320192294140475236.png" width="50" height="60">
+</div>
+
+
+</nav>
+</div>
+
+</body>
+</html>
