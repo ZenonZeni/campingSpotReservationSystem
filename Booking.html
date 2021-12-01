@@ -437,13 +437,42 @@ button#book {
   cursor: pointer;
 }
 
-#paymentbutton {
+#paymentbutton  {
+
 
     margin-left: 100px;
      border: 5px solid aqua;
 
 }
 
+#paymentbutton1  {
+
+
+    margin-left: 100px;
+     border: 5px solid aqua;
+
+}
+#paymentbutton2 {
+
+
+    margin-left: 100px;
+     border: 5px solid aqua;
+
+}
+#paymentbutton3  {
+
+
+    margin-left: 100px;
+     border: 5px solid aqua;
+
+}
+#paymentbutton4  {
+
+
+    margin-left: 100px;
+     border: 5px solid aqua;
+
+}
 .addreview {
     padding: 0px;
     box-sizing:border-box;
@@ -702,7 +731,7 @@ function checkType(){
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button class="myBtn"> BOOK </button>
+                                         <button class="myBtn" id="btn-book"> BOOK </button>
                                         <!-- The Modal -->
                                               <div class="modal">
 
@@ -723,7 +752,13 @@ function checkType(){
                                                       <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
                                                   <input type="expiredate" placeholder="(MM/YY)"/>
                                                      <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
-                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+                                                      <br><button id="paymentbutton"> ADD PAYMENT METHOD </button>
+<script>
+document.getElementById("paymentbutton").addEventListener("click", function() {
+  document.getElementById("btn-book").innerHTML = "Booked";
+  window.alert("Successful! Payment Method Added!");
+});
+</script>
 
    </div>
 </div>
@@ -837,7 +872,7 @@ function checkType(){
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                     <button class="myBtn"> BOOK </button>
+                                     <button class="myBtn" id="btn-book1"> BOOK </button>
                                      <!-- The Modal -->
                                               <div class="modal">
 
@@ -858,8 +893,14 @@ function checkType(){
                                                       <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
                                                   <input type="expiredate" placeholder="(MM/YY)"/>
                                                      <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
-                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+                                                      <br><button id="paymentbutton1"> ADD PAYMENT METHOD </button>
 
+<script>
+document.getElementById("paymentbutton1").addEventListener("click", function() {
+  document.getElementById("btn-book1").innerHTML = "Booked";
+  window.alert("Successful! Payment Method Added!");
+});
+</script>
                                        </div>
 
                               </div>
@@ -999,7 +1040,7 @@ function checkType(){
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button class="myBtn"> BOOK </button>
+                                         <button class="myBtn" id="btn-book2"> BOOK </button>
                                   <!-- The Modal -->
                                               <div class="modal">
 
@@ -1020,8 +1061,13 @@ function checkType(){
                                                       <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
                                                   <input type="expiredate" placeholder="(MM/YY)"/>
                                                      <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
-                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
-
+                                                      <br><button id="paymentbutton2" > ADD PAYMENT METHOD </button>
+<script>
+document.getElementById("paymentbutton2").addEventListener("click", function() {
+  document.getElementById("btn-book2").innerHTML = "Booked";
+  window.alert("Successful! Payment Method Added!");
+});
+</script>
                                        </div>
 
                               </div>
@@ -1162,7 +1208,7 @@ function checkType(){
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button class="myBtn"> BOOK </button>
+                                         <button class="myBtn" id="btn-book3"> BOOK </button>
                                   <!-- The Modal -->
                                               <div class="modal">
 
@@ -1183,8 +1229,14 @@ function checkType(){
                                                       <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
                                                   <input type="expiredate" placeholder="(MM/YY)"/>
                                                      <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
-                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+                                                      <br><button id="paymentbutton3" > ADD PAYMENT METHOD </button>
 
+<script>
+document.getElementById("paymentbutton3").addEventListener("click", function() {
+  document.getElementById("btn-book3").innerHTML = "Booked";
+  window.alert("Successful! Payment Method Added!");
+});
+</script>
                                        </div>
 
                               </div>
@@ -1321,7 +1373,7 @@ function checkType(){
                                   <option name="" id="" value="6">7</option>
                              </select>
                                   <br><div class="bookbutton">
-                                         <button class="myBtn"> BOOK </button>
+                                         <button class="myBtn" id="btn-book4"> BOOK </button>
                                   <!-- The Modal -->
                                               <div class="modal">
 
@@ -1342,8 +1394,14 @@ function checkType(){
                                                       <label for="cvv" style="margin-left: 150px;"> CVV </label><br>
                                                   <input type="expiredate" placeholder="(MM/YY)"/>
                                                      <input  style="margin-left: 90px;" type="cvv" placeholder="(3 digits)"/> <br> <br>
-                                                      <br><button id="paymentbutton" onclick="window.alert('Successful! Payment Method Added')"> ADD PAYMENT METHOD </button>
+                                                      <br><button id="paymentbutton4" > ADD PAYMENT METHOD </button>
 
+<script>
+document.getElementById("paymentbutton4").addEventListener("click", function() {
+  document.getElementById("btn-book4").innerHTML = "Booked";
+  window.alert("Successful! Payment Method Added!");
+});
+</script>
                                        </div>
 
                               </div>
