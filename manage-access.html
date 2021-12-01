@@ -474,7 +474,7 @@ function checkType(){
 
         <nav>
           <ul>
-						<script type="text/javascript" src="JavaScript&PHP/checks.js"></script>
+			<script type="text/javascript" src="JavaScript&PHP/checks.js"></script>
             <li><a href="index.html">Home</a></li>
             <li><a href="About-Us.html">About</a></li>
             <li><a href="ExampleLogin.html" id="login">Login</a></li>
@@ -488,52 +488,52 @@ function checkType(){
 <div class="main-1">
    <h2> Add Users </h2><hr>
 <br>
-   <form id="addUser-form">
+   <form id="registration-form">
 
 
-      <input type="firstname" placeholder="First Name"/></input>
-      <input type="lastname" placeholder="Last Name"/></input>
-      <input type="email" placeholder="Phone Number or Email Address"/></input>
-	  <input type="phone" placeholder="Phone"> </input>
-      <input placeholder=" Generate Password"/></input>
+      <input type="firstname" placeholder="First Name" name="firstname"/></input>
+      <input type="lastname" placeholder="Last Name" name="lastname"/></input>
+      <input type="email" placeholder="Email Address" name="email"/></input>
+	  <input type="phone" placeholder="Phone" name="phone"> </input>
+      <input type="password" name="password" placeholder=" Generate Password"/></input>
 
 <div>
       <label type="birth"> Date Of Birth </label>
-      <label type="gender"> Gender </label>
+      <label type="genderChoice"> Gender </label>
 </div>
 <div>
-      <select type="birthdate" >
+      <select type="birthyear" id="birthyear" name="birthyear">
           <option value="0">Year</option>
-          <option value="1">2000</option>
-          <option value="2">2001</option>
-          <option value="3">2002</option>
-          <option value="4">2003</option>
-          <option value="5">2004</option>
-          <option value="6">2005</option>
-          <option value="7">2006</option>
-          <option value="8">2007</option>
-          <option value="9">2008</option>
-          <option value="10">2009</option>
-          <option value="11">2010</option>
-          <option value="12">2011</option>
+          <option value="200">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
      </select>
 
-      <select type="birthdate">
+      <select type="birthmonth" id="birthmonth" name="birthmonth">
           <option value="0">Month</option>
           <option value="1">January</option>
           <option value="2">February</option>
           <option value="3">March</option>
-          <option value="4">Apirl</option>
+          <option value="4">April</option>
           <option value="5">May</option>
           <option value="6">June</option>
           <option value="7">July</option>
           <option value="8">August</option>
           <option value="9">September</option>
           <option value="10">October</option>
-          <option value="11">Noveremebr</option>
+          <option value="11">November</option>
           <option value="12">December</option>
       </select>
-       <select type="birthdate" >
+       <select type="birthday" id="birthday" name="birthday">
          <option value="0">Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -569,19 +569,19 @@ function checkType(){
 
        </select>
 
-   <select type="gender" >
+   <select type="gender" id="gender" name="gender">
          <option value="0">Select Gender</option>
-         <option value="1">Male</option>
-         <option value="2">Female</option>
+         <option value="Male">Male</option>
+         <option value="Female">Female</option>
    </select><br>
 <br>
 
 </div>
-  <button type="submit" class="btn-add-users"> Add </button>
+  <button type="submit" class="submit"> Add </button>
 </div>
 
 </form>
-
+<script type="text/javascript" src="Manage_System/addUsers.js"></script>
 <div class="main-2">
    <h2> Current Users  </h2><hr>
                     <div class="profile-image" style="overflow-y:scroll;"> <span >
