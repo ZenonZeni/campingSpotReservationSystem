@@ -152,7 +152,7 @@ nav h3  p {
 
 }
 
-#addUser-form {
+#registration-form {
 
   margin: 0 auto;
    color: white;
@@ -160,21 +160,21 @@ nav h3  p {
 
 
 }
-#addUser-form p {
+#registration-form p {
   margin: -40px 0px -10px 0px;
   text-shadow: 2px 2px 8px #FF0000;
   padding: 20px;
    color: white;
 }
 
-#addUser-form input {
+#registration-form input {
   box-sizing: border-box;
   width: 100%;
   margin: 0 0 20px 0;
   padding: 10px;
 }
 
-#addUser-form input[type=firstname] {
+#registration-form input[type=firstname] {
 
   float: left;
   box-sizing: border-box;
@@ -184,7 +184,7 @@ nav h3  p {
 
 }
 
-#addUser-form input[type=lastname] {
+#registration-form input[type=lastname] {
 
   float: right;
   box-sizing: border-box;
@@ -194,15 +194,22 @@ nav h3  p {
 
 }
 
-#addUser-form label[type=birth] {
+#registration-form label[type=birth] {
 
 
   font-size: 18px;
   color: white;
 
 }
+#registration-form select[type=gender] {
 
-#addUser-form label[type=gender] {
+   float: right;
+   color: black;
+   font-size: 16px;
+}
+
+
+#registration-form label[type=genderChoice] {
 
    float: right;
    color: white;
@@ -210,20 +217,32 @@ nav h3  p {
 }
 
 
-#addUser-form select[type=birthdate] {
+#registration-form select[type=birthyear] {
 
 float:left;
 font-size: 16px;
 
 }
-#addUser-form select[type=gender] {
+#registration-form select[type=birthmonth] {
+
+float:left;
+font-size: 16px;
+
+}
+#registration-form select[type=birthday] {
+
+float:left;
+font-size: 16px;
+
+}
+#registration-form select[type=genderChoice] {
 
 font-size: 16px;
 float:right;
 color:black;
 }
 
-.btn-add-users {
+.submit {
 
   padding: 10px;
   width: 100px;
