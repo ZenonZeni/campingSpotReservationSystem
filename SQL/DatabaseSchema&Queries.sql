@@ -1,4 +1,4 @@
-Create Table Account for Account
+
 
 CREATE TABLE Account (account_id int NOT NULL AUTO_INCREMENT, username varchar(255) NOT NULL, account_fname varchar(255) NOT NULL, account_lname varchar(255) NOT NULL,
 email varchar(255) NOT NULL, phone DOUBLE, account_password varchar(255) NOT NULL,
@@ -6,16 +6,16 @@ gender varchar(7) NOT NULL, birthyear varchar(5) NOT NULL, birthmonth varchar(3)
 notifications varchar(3) DEFAULT  'YES',
 primary key(account_id));
 
-CREATE Table Account for Reservation depends on Account, Campsite, Campspot
+//CREATE Table Account for Reservation depends on Account, Campsite, Campspot
 //Do this later
 
-CREATE Table for Campsite
+//CREATE Table for Campsite
 //Do this later
 
-CREATE Table for Camp Spot
+//CREATE Table for Camp Spot
 //Do this later
 
-CREATE TABLE for Review
+//CREATE TABLE for Review
 
 Insert Data for Account
 INSERT INTO Account (username,account_fname,account_lname,email,phone,account_password,gender,birthyear,birthmonth,birthday,account_type) 
