@@ -1,5 +1,5 @@
 <?php
-$servername = "database-1.cswynyoi30d6.us-east-2.rds.amazonaws.com:3306";
+$servername = "database-1.cn0jcj9v3ywu.ca-central-1.rds.amazonaws.com";
 $username = "campingspot";
 $password = 'password123!';
 $dbname = "campingSpotSystem";
