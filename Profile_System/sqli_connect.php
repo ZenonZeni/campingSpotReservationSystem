@@ -1,5 +1,5 @@
 <?php
-$servername = "18.216.127.232";
+$servername = "zenonzeni.com";
 $username = "campingspot";
 $password = 'password123!';
 $dbname = "campingSpotSystem";
